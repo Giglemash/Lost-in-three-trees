@@ -1,2 +1,5 @@
 **/*.rpyc
 **/*.rpymc
+**/*.rpyb
+**/log.txt
+**/saves/*
