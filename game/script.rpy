@@ -48,7 +48,7 @@ screen daytime:
 
 init:
     image gregory normal = "character/Gregory/gregor normal.png"
-    image greg normal = im.MatrixColor ("character/Gregory/gregor normal.png", im.matrix.opacity(0.25))
+    image greg normal = im.MatrixColor ("character/Gregory/gregor normal.png", im.matrix.opacity(0.75))
     image lionel1 = "character/Lionel/leo normal.png"
     image leo ghost = im.MatrixColor ("character/Lionel/leo normal.png", im.matrix.opacity(0.65))
     image lionel2 = "character/Lionel/leo vspom.png"
