@@ -317,16 +317,16 @@ label start:
 # Темный экран
     ""
 # Также, слышатся звуки (громкость постепенно увеличивается): то неразборчивый шепот, то скрежет затачиваемого металла, то тихий женский смех. 
-    $ renpy.music.set_volume(.4, delay=0, channel='bgsfx2')
+    $ renpy.music.set_volume(.3, delay=0, channel='bgsfx2')
     $ renpy.music.set_volume(.4, delay=0, channel='bgloop')
     play bgsfx2 "audio/whispering.ogg" loop
     play bgloop "audio/sharpening.ogg"
-    $ renpy.music.set_volume(.8, delay=2.0, channel='bgsfx2')
-    $ renpy.music.set_volume(.9, delay=2.0, channel='bgloop')
+    $ renpy.music.set_volume(.8, delay=5.0, channel='bgsfx2')
+    $ renpy.music.set_volume(.9, delay=5.0, channel='bgloop')
     a "Я что, схожу с ума?! Этого не может быть... Это все нереально."
     play audio "audio/female_laugh.ogg"
     a "Боже, как же мне холодно... какой-то озноб...{w} надо сначала... срочно найти что... чем согреться."
-    stop bgloop2 fadeout 1.0
+    stop bgsfx2 fadeout 1.0
     stop bgloop fadeout 1.0
     stop bgsfx1 fadeout 1.0
 
