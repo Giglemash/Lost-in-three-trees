@@ -260,8 +260,9 @@ label start:
     stop sound fadeout 1.0
 
 # Слышатся звуки ударов героя по двери.
-
+    play bgsfx3 "audio/breaking_door.ogg"
     a "Крепкая, выбить почти нереально. Так, надо успокоиться. Паника убивает быстрее всего."
+    stop bgsfx3 fadeout 1.0
 
 # Мы слышим звуки частого дыхания героя.
     play bgsfx1 "audio/breath.ogg" loop
@@ -312,13 +313,22 @@ label start:
     $ dt = "ночь"
 
 # Мы слышим сильное сердцебиение за кадром.
-
+    play bgsfx1 "audio/heartbeat.ogg" loop
 # Темный экран
-
+    ""
 # Также, слышатся звуки (громкость постепенно увеличивается): то неразборчивый шепот, то скрежет затачиваемого металла, то тихий женский смех. 
-
+    $ renpy.music.set_volume(.4, delay=0, channel='bgsfx2')
+    $ renpy.music.set_volume(.4, delay=0, channel='bgloop')
+    play bgsfx2 "audio/whispering.ogg" loop
+    play bgloop "audio/sharpening.ogg"
+    $ renpy.music.set_volume(.8, delay=2.0, channel='bgsfx2')
+    $ renpy.music.set_volume(.9, delay=2.0, channel='bgloop')
     a "Я что, схожу с ума?! Этого не может быть... Это все нереально."
+    play audio "audio/female_laugh.ogg"
     a "Боже, как же мне холодно... какой-то озноб{w}... надо сначала... срочно найти что... чем согреться."
+    stop bgloop2 fadeout 1.0
+    stop bgloop fadeout 1.0
+    stop bgsfx1 fadeout 1.0
 
 # разожженный камин.
 
@@ -329,7 +339,7 @@ label start:
     play bgsfx1 "audio/breath.ogg" loop
     a "Хорошо, вроде получше... не так холодно."
     a "Все не могу понять:{w} я брежу? Я сплю?{w} Или с этим местом что-то не так?"
-    a "Они же выглядит неживымы и...{w} гниющими?"
+    a "Они же выглядит неживыми...{w} гниющими?"
     a "Они прокляты? Я проклят? Черт..."
     stop bgsfx1 fadeout 1.0
     a "Тут среди углей были какие-то обгоревшие бумаги."
@@ -354,12 +364,14 @@ label start:
     scene kabinet
 
 # Слышен звук скрипящего пера.
+    play bgsfx1 "audio/pencil.ogg" loop
 
 
 
     if sc10one:
         show will ghost o4ki at left
         Will "О, вы вовремя! Сейчас, послушайте монолог моего героя о тщетности бытия! Только что написал."
+        stop bgsfx1 fadeout 1.0
         $ q = []
         while len(q) < 2:
             menu:
@@ -375,6 +387,7 @@ label start:
     else:
         show will ghost o4ki at left
         n "О, вы вовремя! Сейчас, послушайте монолог моего героя о тщетности бытия! Только что написал."
+        stop bgsfx1 fadeout 1.0
         menu:
             "Ты кто?":
                 n "Мне кажется, любой обладатель мало-мальски среднего интеллекта уже бы сообразил, что я писатель."
@@ -443,12 +456,14 @@ label two1:
     hide will ghost o4ki with dissolve
 
 # Герой листает книгу (мы слышим шорох страниц).
-
+    play bgsfx1 "audio/pages.ogg" loop
 # Страница
     menu:
         "Получена книга вашего деда":
             scene dom
             a "Тут... одно и то же..."
+
+    stop bgsfx1 fadeout 1.0
 
     scene kabinet
 
@@ -600,6 +615,7 @@ label three:
 label deadone:
 
     # Звуки пронзания
+    play audio "audio/flesh_penetration.ogg"
     # Черный экран
     # Конец
 
@@ -643,8 +659,11 @@ label for:
             # INT Дверь в особняк.
             scene kabinet
             # Слышны звуки ударов в дверь.
+            play bgsfx3 "audio/breaking_door.ogg"
             a "Нет! Чертов урод! Давай же, поддавайся."
+            stop bgsfx3 fadeout 1.0
             # ГГ кашляет.
+            play bgsfx3 "audio/coughing.ogg"
             # Экран темнеет.
             # смерть
             
@@ -663,6 +682,7 @@ label for:
             # INT каминная много лет назад.
             hide leo ghost
             # Слышен женский смех.
+            play audio "audio/female_laugh.ogg"
 
             s "А ну не смей поддаваться!"
             s "Ну же, защищайся по-нормальному! Я хочу поразить тебя в честной борьбе."
@@ -683,6 +703,8 @@ label for:
             leo "Теперь ты понимаешь? Она верила в меня. Она единственная поддерживала меня. До конца."
             leo "Я никогда не смогу простить себя."
             # Мы слышим звуки игры на рояле.
+            stop music
+            play music "audio/piano_loop.ogg"
             # вид рояля
             s "Ты не виноват, и я тебя никогда не винила."
             s "Это был не ты, а твой недуг, выпестованный жестоким миром. Ты помнишь, как много боли тебе нанесли?"
