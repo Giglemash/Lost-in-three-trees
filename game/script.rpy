@@ -30,9 +30,6 @@ define sc17two = False
 
 # Иниты (что бы это ни значило!)
 
-init python:
-    style.default.font = "19440.ttf"
-
 init:
     $ noisedissolve = ImageDissolve(im.Tile("images/noisetile.png"), 1.0, 1)
 # hide screen daytime with noisedissolve
