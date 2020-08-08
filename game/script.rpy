@@ -4,9 +4,9 @@
 # name of the character.
 
 # Баклажановый
-define Will = Character("Уильям", color='#990066')
+define Will = Character("Уильям", color='#990066', image = "will")
 # Лягушка в обмороке (серенький)
-define leo = Character("Лайонель", color='#7b917b')
+define leo = Character("Лайонель", color='#7b917b', image = "leo")
 # Макароны и сыр (розовенький)
 define g = Character("Грегори", color='#ffbd88')
 # Влюбленная жаба (зелененький)
@@ -30,12 +30,68 @@ define sc17two = False
 
 # Иниты (что бы это ни значило!)
 
+init python:
+    style.default.font = "19440.ttf"
+
+init:
+    $ noisedissolve = ImageDissolve(im.Tile("images/noisetile.png"), 1.0, 1)
+# hide screen daytime with noisedissolve
+
+init:
+    image koridor2 = "location/koridor"
+    image kamin2 = "kamin"
+    image kabinet2 = "kabinet"
+    $ dt = "утро"
+screen daytime:
+    if dt == "утро":
+        add "#00000000"
+    if dt == "ночь":
+        add "#000b"
+
+
+init:
+    image gregory normal = "character/Gregory/gregor normal.png"
+    image greg normal = im.MatrixColor ("character/Gregory/gregor normal.png", im.matrix.opacity(0.25))
+    image lionel1 = "character/Lionel/leo normal.png"
+    image leo ghost = im.MatrixColor ("character/Lionel/leo normal.png", im.matrix.opacity(0.65))
+    image lionel2 = "character/Lionel/leo vspom.png"
+    image leo ghost vspom = im.MatrixColor ("character/Lionel/leo vspom.png", im.matrix.opacity(0.65))
+    image william1 = "character/William/will na gg.png"
+    image will ghost = im.MatrixColor ("character/William/will na gg.png", im.matrix.opacity(0.65))
+    image william2 = "character/William/will 3apisi.png"
+    image will ghost ob = im.MatrixColor ("character/William/will 3apisi.png", im.matrix.opacity(0.65))
+    image william3 = "character/William/will o4ki.png"
+    image will ghost o4ki = im.MatrixColor ("character/William/will o4ki.png", im.matrix.opacity(0.65))
+
 init:
     $ flash = Fade(.25, 0, .75, color="#fff8dc")
 
 init:
     $ timer_range = 0
     $ timer_jump = 0
+    $ renpy.music.register_channel("bgloop", mixer="sfx", loop=True, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
+    $ renpy.music.register_channel("bgloop2", mixer="sfx", loop=True, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
+    $ renpy.music.register_channel("bgsfx1", mixer="sfx", loop=False, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
+    $ renpy.music.register_channel("bgsfx2", mixer="sfx", loop=False, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
+    $ renpy.music.register_channel("bgsfx3", mixer="sfx", loop=False, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
+    $ renpy.music.register_channel("bgsfx4", mixer="sfx", loop=False, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
+
+init:
+    $ noisedissolve = ImageDissolve(im.Tile("noisetile.png"), 1.0, 1)
+# hide screen daytime with noisedissolve
+
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    show text "American Bishoujo представляет..." with dissolve
+    with Pause(2)
+
+    hide text with dissolve
+    with Pause(1)
+
+    return
+
 
 # The game starts here.
 
@@ -72,7 +128,10 @@ label start:
     a "Надо скорее продать этот мрачный особняк и уехать. Думаю, этих денег должно хватить, чтобы начать новую жизнь. Всегда хотел погрузиться в египтологию."
 
 # Звук звонка
-
+    $ renpy.music.set_volume(1.0, delay=0, channel='bgloop')
+    play bgloop "audio/call.ogg"
+    ""
+    stop bgloop fadeout 1.0
     a "Алло."
     i "Артур, я звоню выразить свои соболезно..."
     a "Вы звоните не за этим."
@@ -100,8 +159,10 @@ label start:
 # Рояльная
 
     a "Хм... толстый слой пыли на клавишах. Никто не играл на нем уже много лет. Очередной бессмысленный предмет."
-
+    play sound "audio/thunder.ogg"
+    show screen daytime
     scene kamin
+    $ dt = "ночь"
 
 # Удар грома
 
@@ -109,24 +170,33 @@ label start:
 
 # Темная каминная
 
+    ""
     a "Черт, только этого не хватало. Теперь еще щитки искать..."
-
+    stop sound fadeout 1.0
 # Темный камин
-
+    $ renpy.music.set_volume(.7, delay=0, channel='bgloop')
+    play bgloop "audio/creak_steps_slow.ogg"
+    $ renpy.music.set_volume(.3, delay=0, channel='bgsfx1')
+    play bgsfx1 "audio/breath.ogg" loop
     scene koridor
 
 # Дыхание ГГ и скрип половиц
 
     a "Где же они? Черт!"
 
-# Шепот
 
+# Шепот
+    $ renpy.music.set_volume(.4, delay=0, channel='bgsfx2')
+    play bgsfx2 "audio/whispering.ogg" loop
     a "Что это такое... Здесь никого не должно быть."
+    stop bgsfx1 fadeout 1.0
+
     a "Эй, кто здесь?"
 
+    stop bgloop fadeout 1.0
 # Усиление шепота
 
-    with dissolve
+    $ renpy.music.set_volume(.7, delay=0, channel='bgsfx2')
 
 # Кабинет со свечей
 
@@ -135,19 +205,24 @@ label start:
         time 1.5
         linear 3.0 alpha 1.0
 
+    hide screen daytime
+
     a "Это напрягает. Кто, черт возьми, зажег эту свечу?{w} Сюда что, кто-то вломился? Надо звонить копам."
     a "Черт, мобильная связь тоже накрылась. Что за жесть такая тут происходит? Лучше уйти отсюда. Возьму свечу, а то с той лестницы можно и навернуться ненароком."
 
 # Тихий смех и еще более громкий шепот
 
+    $ renpy.music.set_volume(1.0, delay=0, channel='bgsfx2')
+    play audio "audio/laugh.ogg"
     scene koridor
 
     a "Кажется, кто-то в каминной на первом этаже. Выйти из дома можно только там. Черт, почему в этом доме нет черного входа?"
     a "Придется выяснить, кто там бродит. Надеюсь, он один и не вооружен."
-
+    stop bgsfx2 fadeout 1.0
 # без огня
 
     scene kamin
+    show leo ghost at right
 
     n "Как же она красива..."
     a "Эй! Ты кто такой? Как ты сюда забрался вообще? А ну..."
@@ -155,18 +230,19 @@ label start:
     a "Слушай, мне сейчас не до романтики. Сюда уже едет полиция. Медленно подними руки. Это ты вырубил свет?"
     n "Нет, это Грегори. А я - Лайонель, к слову."
     a "Какой к черту Грегори? Где он?"
-    leo "Стоит прямо за тобой."
+    leo @ ghost vspom "Стоит прямо за тобой."
 
 # Дверь с расстворяющимся призраком
 
     scene kabinet
     with wiperight
 
-    show gregor
+    show greg normal at center:
+        alpha 0.3
     with dissolve
 
     a "Твою..."
-    hide gregor
+    hide greg normal
 
     scene kamin
     with wipeleft
@@ -174,33 +250,36 @@ label start:
     a "Что это было? Что? Он... он не мог просто исчезнуть, я отвернулся на секунду. Что за?.. Черт, надо убираться отсюда."
 
 # Дверь. Слышим звуки судорожно поворачиваемой ручки
-
+    play sound "audio/door_knob_rattling.ogg" loop
     scene kabinet:
         alpha 1.0
         time 1.0
         linear 3.0 alpha 1.0
 
     a "Черт, она заперта! Как? Как это возможно?"
+    stop sound fadeout 1.0
 
 # Слышатся звуки ударов героя по двери.
 
     a "Крепкая, выбить почти нереально. Так, надо успокоиться. Паника убивает быстрее всего."
 
 # Мы слышим звуки частого дыхания героя.
-
+    play bgsfx1 "audio/breath.ogg" loop
     a "В детстве кто-то учил...{w} кажется на фехтовании...{w} короткий вдох, продолжительный выдох."
+    stop bgsfx1 fadeout 2.0
     a "Осмотрю комнаты - может найду ключ."
 
     menu:
         "Надо внимательнее исследовать кабинет":
             $ sc10one = True
             scene kabinet
-            # показать призрака
+            show will ghost ob
             a "Эй, ты кто вообще такой? Что ты тут забыл?"
             n "Тише, тише, молодой человек, не надо так орать, будто вы до мертвых добудиться хотите.{w} Позвольте представиться: Уильям, мастер слова и пера."
             Will "Кстати, как вам это отрывок:" 
             Will "«Ход его рассуждений прервался, и он увидел бесконечную тьму ее разума, лишенного всяческого сострадания. Она была безжалостным хищником, мифической сиреной, одержимой неутолимой жаждой загубленных душ...»"
             a "Вы знакомый моего деда Николаса?"
+            show will ghost
             Will "Конечно, я знал его всю свою жизнь."
             Will "Ах, бедный, бедный Николас. Какое счастье, что он покинул свою скорбную юдоль позора..."
             a "Тогда, может, поможете мне выйти отсюда?"
@@ -225,10 +304,12 @@ label start:
             scene orujka
             with fade
 
+    show screen daytime
     scene koridor:
         alpha 1.0
         time 2.0
         linear 3.0 alpha 1.0
+    $ dt = "ночь"
 
 # Мы слышим сильное сердцебиение за кадром.
 
@@ -242,22 +323,27 @@ label start:
 # разожженный камин.
 
     scene kamin
+    hide screen daytime
 
 # Тяжелое дыхание
-
+    play bgsfx1 "audio/breath.ogg" loop
     a "Хорошо, вроде получше... не так холодно."
     a "Все не могу понять:{w} я брежу? Я сплю?{w} Или с этим местом что-то не так?"
     a "Они же выглядит неживымы и...{w} гниющими?"
     a "Они прокляты? Я проклят? Черт..."
+    stop bgsfx1 fadeout 1.0
     a "Тут среди углей были какие-то обгоревшие бумаги."
 
 # Письмо
 
+    show screen daytime
     scene dom
+    $ dt = "утро"
 
     a "Любопытно. Значит, дед был серьезно болен… Это, конечно, его не оправдывает, но..."
     a "И что, эти его субличности смогли как-то воплотиться после смерти? Жуть какая."
 
+    hide screen daytime with noisedissolve
     scene kamin
 
     a "Похоже, и вправду попал в дом с привидениями. Или в готический роман. Эдгар, ты балуешься?"
@@ -269,23 +355,26 @@ label start:
 
 # Слышен звук скрипящего пера.
 
-    Will "О, вы вовремя! Сейчас, послушайте монолог моего героя о тщетности бытия! Только что написал."
 
 
     if sc10one:
+        show will ghost o4ki at left
+        Will "О, вы вовремя! Сейчас, послушайте монолог моего героя о тщетности бытия! Только что написал."
         $ q = []
         while len(q) < 2:
             menu:
                 "Ты знаешь Грегори или Лайонеля?" if not 1 in q:
                     $ q.append(1)
                     $ renpy.block_rollback()
-                    Will "Это кто? Имена будто у персонажей каких-то второсортных новелл."
+                    Will ghost "Это кто? Имена будто у персонажей каких-то второсортных новелл."
                 "Ты знаешь что-то про девушку с портрета внизу на каминной полке?" if not 2 in q:
                     $ q.append(2)
                     $ renpy.block_rollback()
-                    Will "Молодой человек, мой ум постоянно вовлечен в сложную интеллектуальную деятельность."
-                    Will "Мне некогда рассматривать каких-то девиц. Даже на портретах."      
+                    Will ghost "Молодой человек, мой ум постоянно вовлечен в сложную интеллектуальную деятельность."
+                    Will ghost "Мне некогда рассматривать каких-то девиц. Даже на портретах."      
     else:
+        show will ghost o4ki at left
+        n "О, вы вовремя! Сейчас, послушайте монолог моего героя о тщетности бытия! Только что написал."
         menu:
             "Ты кто?":
                 n "Мне кажется, любой обладатель мало-мальски среднего интеллекта уже бы сообразил, что я писатель."
@@ -297,22 +386,23 @@ label start:
                 "Ты знаешь Грегори или Лайонеля?" if not 1 in q:
                     $ q.append(1)
                     $ renpy.block_rollback()
-                    Will "Это кто? Имена будто у персонажей каких-то второсортных новелл."
+                    Will ghost ob "Это кто? Имена будто у персонажей каких-то второсортных новелл."
                 "Ты знаешь что-то про девушку с портрета внизу на каминной полке?" if not 2 in q:
                     $ q.append(2)
                     $ renpy.block_rollback()
-                    Will "Молодой человек, мой ум постоянно вовлечен в сложную интеллектуальную деятельность."
-                    Will "Мне некогда рассматривать каких-то девиц. Даже на портретах."
+                    Will ghost ob "Молодой человек, мой ум постоянно вовлечен в сложную интеллектуальную деятельность."
+                    Will ghost ob "Мне некогда рассматривать каких-то девиц. Даже на портретах."
 
     scene kabinet
+    show will ghost ob
     $ q = []
     while len(q) < 3:
         menu:
             "Ты не в курсе, Николас никого не убивал?" if not 1 in q:
                 $ q.append(1)
                 $ renpy.block_rollback()
-                Will "Молодой человек! Николас хоть и был посредственным писателем, но человеком был весьма приличным."
-                Will "Как вы вообще могли такое о нем подумать?"
+                Will @ ghost o4ki "Молодой человек! Николас хоть и был посредственным писателем, но человеком был весьма приличным."
+                Will @ ghost o4ki "Как вы вообще могли такое о нем подумать?"
             "Тебе заняться больше нечем, как сидеть тут и заниматься «интеллектуальной деятельностью» в темноте?" if not 2 in q:
                 $ q.append(2)
                 $ renpy.block_rollback()
@@ -340,14 +430,17 @@ label start:
 label two1:
 
     scene kabinet
+    show will ghost o4ki
 
     Will "Однако, вы умудрились истощить мое долгое терпение и окончательно меня разочаровать."
     Will "Вы могли бы прочесть здесь произведения истинного гения, но предпочли писанину вашего деда."
     Will "Что ж, прах к праху. Признаюсь, когда я прочитал последний труд вашего деда, я ужаснулся.{w} Из всех книг, что он написал - это худшая, без сомнения."
     Will "Ради его репутации, я ее немножко подправил, точнее, основательно переписал."
     Will "Я отдам ее вам, но исключительно для того, чтобы вы оставили меня в покое."
-    Will "Берите и идите, прошу вас! Продайте ее и живите сытой жизнью за счет плодов чужого ума, как и полагается людям вашего сорта."
-    Will "Прощайте."
+    Will @ ghost ob "Берите и идите, прошу вас! Продайте ее и живите сытой жизнью за счет плодов чужого ума, как и полагается людям вашего сорта."
+    Will @ ghost ob "Прощайте."
+
+    hide will ghost o4ki with dissolve
 
 # Герой листает книгу (мы слышим шорох страниц).
 
@@ -369,6 +462,7 @@ label two1:
 label two2:
 
     scene kabinet
+    show will ghost ob
 
     Will "Я понимаю, сложно смотреть объективно из-за уз родства,{w} но прошу вас, не стоит быть таким наивным."
     a "Дед написал минимум один бестселлер, общепризнанно вошедший в классику литературы."
@@ -379,7 +473,7 @@ label two2:
     Will "И Николас, тогда еще молодой, получил его книгу в наследство."
     Will "Близким друзьям он говорил, что книгу ему вручил призрак...{w} Чушь для впечатлительных дам и легковерных глупцов!"
     Will "Недолго думая, ваш дед присвоил себе авторство и - стал известным и богатым"
-    Will "Вот только сам он уже не смог создать что-либо стоящее."
+    Will ghost o4ki "Вот только сам он уже не смог создать что-либо стоящее."
     Will "Я, конечно, многому пытался его научить, но, увы, его потолок - бульварные детективчики."
     a "Интересная история. Скажите, а что издали вы?"
     Will "Помилуйте, как некультурно, спрашивать такое..."
@@ -389,12 +483,14 @@ label two2:
     a "Ведь вы - всего лишь маска.{w} Вы - иллюзия гениальности."
     a "Вас создал мой дед - и создал весьма занудным.{w} Ваша роль - быть барьером от страшной для него правды. Правды, что он никогда не был достоин этого статуса и славы."
     a "Он умер, а вы так и остались его марионеткой.{w} Как вам такой поворот сюжета?"
-    Will "Вы... вы... правы."
+    Will ghost "Вы... вы... правы."
     Will "Да, теперь я вижу всю картину целиком."
     Will "Прискорбно признавать, но похоже, я - лишь красивая обложка, за которой - тщетная пустота."
-    Will "Это так больно.{w} Но в то же врем...{w} Я чувствую, что наконец-то свободен."
+    Will "Это так больно.{w} Но в то же время...{w} Я чувствую, что наконец-то свободен."
     Will "Парадоксально, но я благодарен вам.{w} Без вас - кто знает, сколько бы я еще был прикован к этому месту."
     Will "Прощайте."
+
+    hide will ghost with dissolve
 
     a "По нему я точно не буду скучать. Он действовал мне на нервы."
     a "Теперь надо разобраться с другими осколками непутевого деда."
@@ -406,12 +502,15 @@ label two2:
 label two3:
 
     scene kabinet
+    show will ghost o4ki
 
     Will "Дешевая интрига, молодой человек.{w} Дешевая интрига и неподобающий тон."
     Will "Ну что же, попробуйте, поразите меня."
     a "Ты - просто призрак моего выжившего из ума деда Николаса."
     Will "Это возмутительно!{w} Как вы смеете!{w} Вы перешли все границы!"
     Will "Убирайтесь отсюда, я больше не собираюсь лицезреть вашу отвратительную физиономию."
+
+    hide will ghost o4ki with dissolve
 
     a "По нему я точно не буду скучать.{w} Он действовал мне на нервы."
     a "Теперь надо разобраться с другими осколками непутевого деда."
@@ -524,8 +623,10 @@ label for:
 
     scene kamin
 
+    show leo ghost
+
     leo "Так странно.{w} Этот камин не разжигали уже очень давно."
-    leo "Я все-таки узнал тебя.{w} Ты - внук Николаса, верно?"
+    leo @ ghost vspom "Я все-таки узнал тебя.{w} Ты - внук Николаса, верно?"
     leo "Я... он чувствует к тебе сильную привязанность.{w} И поэтому ты должен уйти."
     leo "Пойми, Николас... мы не можем, не должны находиться рядом с теми, кто нам дорог. Поэтому я просил Николаса прекратить общение с тобой."
     leo "Мы разрушаем все, что любим. Мы... я настоящее чудовище..."
@@ -549,18 +650,18 @@ label for:
             
 
         "Не вмешиваться":
-            leo "Я не должен жить."
+            leo ghost vspom "Я не должен жить."
             leo "Я пытался... уйти... но эти двое так и не дали мне довести ту попытку до конца."
             leo "Мне пришлось жить и мучаться, жить и каждый день ненавидеть себя."
             leo "Ты можешь себе представить, каково это?"
             a "Дед, я сейчас обращаюсь к тебе."
             a "Хватит. Больше незачем прикидываться кем-то другим."
             a "Прошу, прими уже ответственность за все."
-            leo "Ты не понимаешь..."
+            leo ghost "Ты не понимаешь..."
             leo "Я не могу. Слишком велика моя вина."
             leo "Мне нет прощения.{w} Я ведь убил мою Сару... сам убедись, как это было ужасно."
             # INT каминная много лет назад.
-
+            hide leo ghost
             # Слышен женский смех.
 
             s "А ну не смей поддаваться!"
@@ -603,7 +704,7 @@ label for:
                 # Конец. Титры.
             else:
                 # Лайонель остается собой. Рядом с ним появляется призрак Сары.
-                leo "Спасибо тебе. Без тебя я никогда не решился бы."
+                leo ghost vspom "Спасибо тебе. Без тебя я никогда не решился бы."
                 leo "Спасибо, что никто из тех двоих мне больше не мешает уйти."
                 leo "Я так и не смог обрести целостность, но я и не заслужил."
                 leo "Впервые я чувствую облегчение. Я не знаю, сможешь ли ты простить меня... нас."

@@ -2,4 +2,7 @@
 **/*.rpymc
 **/*.rpyb
 **/log.txt
+**/errors.txt
+**/traceback.txt
+**/project.json
 **/saves/*
