@@ -36,6 +36,12 @@ init:
 init:
     $ timer_range = 0
     $ timer_jump = 0
+    $ renpy.music.register_channel("bgloop", mixer="sfx", loop=True, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
+    $ renpy.music.register_channel("bgloop2", mixer="sfx", loop=True, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
+    $ renpy.music.register_channel("bgsfx1", mixer="sfx", loop=False, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
+    $ renpy.music.register_channel("bgsfx2", mixer="sfx", loop=False, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
+    $ renpy.music.register_channel("bgsfx3", mixer="sfx", loop=False, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
+    $ renpy.music.register_channel("bgsfx4", mixer="sfx", loop=False, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
 
 # The game starts here.
 
@@ -72,7 +78,10 @@ label start:
     a "Надо скорее продать этот мрачный особняк и уехать. Думаю, этих денег должно хватить, чтобы начать новую жизнь. Всегда хотел погрузиться в египтологию."
 
 # Звук звонка
-
+    $ renpy.music.set_volume(1.0, delay=0, channel='bgloop')
+    play bgloop "audio/call.ogg"
+    ""
+    stop bgloop fadeout 1.0
     a "Алло."
     i "Артур, я звоню выразить свои соболезно..."
     a "Вы звоните не за этим."
@@ -101,6 +110,7 @@ label start:
 
     a "Хм... толстый слой пыли на клавишах. Никто не играл на нем уже много лет. Очередной бессмысленный предмет."
 
+    play sound "audio/thunder.ogg"
     scene kamin
 
 # Удар грома
@@ -109,23 +119,33 @@ label start:
 
 # Темная каминная
 
+    ""
     a "Черт, только этого не хватало. Теперь еще щитки искать..."
-
+    stop sound fadeout 1.0
 # Темный камин
-
+    $ renpy.music.set_volume(.7, delay=0, channel='bgloop')
+    play bgloop "audio/creak_steps_slow.ogg"
+    $ renpy.music.set_volume(.3, delay=0, channel='bgsfx1')
+    play bgsfx1 "audio/breath.ogg" loop
     scene koridor
 
 # Дыхание ГГ и скрип половиц
 
     a "Где же они? Черт!"
 
-# Шепот
 
+# Шепот
+    $ renpy.music.set_volume(.4, delay=0, channel='bgsfx2')
+    play bgsfx2 "audio/whispering.ogg" loop
     a "Что это такое... Здесь никого не должно быть."
+    stop bgsfx1 fadeout 1.0
+
     a "Эй, кто здесь?"
 
+    stop bgloop fadeout 1.0
 # Усиление шепота
 
+    $ renpy.music.set_volume(.7, delay=0, channel='bgsfx2')
     with dissolve
 
 # Кабинет со свечей
@@ -140,11 +160,13 @@ label start:
 
 # Тихий смех и еще более громкий шепот
 
+    $ renpy.music.set_volume(1.0, delay=0, channel='bgsfx2')
+    play audio "audio/laugh.ogg"
     scene koridor
 
     a "Кажется, кто-то в каминной на первом этаже. Выйти из дома можно только там. Черт, почему в этом доме нет черного входа?"
     a "Придется выяснить, кто там бродит. Надеюсь, он один и не вооружен."
-
+    stop bgsfx2 fadeout 1.0
 # без огня
 
     scene kamin
@@ -174,21 +196,23 @@ label start:
     a "Что это было? Что? Он... он не мог просто исчезнуть, я отвернулся на секунду. Что за?.. Черт, надо убираться отсюда."
 
 # Дверь. Слышим звуки судорожно поворачиваемой ручки
-
+    play sound "audio/door_knob_rattling.ogg" loop
     scene kabinet:
         alpha 1.0
         time 1.0
         linear 3.0 alpha 1.0
 
     a "Черт, она заперта! Как? Как это возможно?"
+    stop sound fadeout 1.0
 
 # Слышатся звуки ударов героя по двери.
 
     a "Крепкая, выбить почти нереально. Так, надо успокоиться. Паника убивает быстрее всего."
 
 # Мы слышим звуки частого дыхания героя.
-
+    play bgsfx1 "audio/breath.ogg" loop
     a "В детстве кто-то учил...{w} кажется на фехтовании...{w} короткий вдох, продолжительный выдох."
+    stop bgsfx1 fadeout 2.0
     a "Осмотрю комнаты - может найду ключ."
 
     menu:
@@ -244,11 +268,12 @@ label start:
     scene kamin
 
 # Тяжелое дыхание
-
+    play bgsfx1 "audio/breath.ogg" loop
     a "Хорошо, вроде получше... не так холодно."
     a "Все не могу понять:{w} я брежу? Я сплю?{w} Или с этим местом что-то не так?"
     a "Они же выглядит неживымы и...{w} гниющими?"
     a "Они прокляты? Я проклят? Черт..."
+    stop bgsfx1 fadeout 1.0
     a "Тут среди углей были какие-то обгоревшие бумаги."
 
 # Письмо
