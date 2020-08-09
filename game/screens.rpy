@@ -749,7 +749,7 @@ screen preferences():
                     textbutton _("After Choices") action Preference("after choices", "toggle")
                     textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
-				vbox:
+                vbox:
                     style_prefix "pref"
                     label _("Language")
                     textbutton "Русский язык" action Language(None)

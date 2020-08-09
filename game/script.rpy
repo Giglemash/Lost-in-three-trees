@@ -64,6 +64,8 @@ init:
     image leo ghost = im.MatrixColor ("character/Lionel/leo normal.png", im.matrix.opacity(0.65))
     image lionel2 = "character/Lionel/leo vspom.png"
     image leo ghost vspom = im.MatrixColor ("character/Lionel/leo vspom.png", im.matrix.opacity(0.65))
+    image lionel3 = "character/Lionel/leo pe4alko.png"
+    image leo ghost pe4al = im.MatrixColor ("character/Lionel/leo pe4alko.png", im.matrix.opacity(0.65))
     
     image william1 = "character/William/will na gg.png"
     image will ghost = im.MatrixColor ("character/William/will na gg.png", im.matrix.opacity(0.65))
@@ -71,6 +73,8 @@ init:
     image will ghost ob = im.MatrixColor ("character/William/will 3apisi.png", im.matrix.opacity(0.65))
     image william3 = "character/William/will o4ki.png"
     image will ghost o4ki = im.MatrixColor ("character/William/will o4ki.png", im.matrix.opacity(0.65))
+    image william4 = "character/William/will vo3m.png"
+    image will ghost evil = im.MatrixColor ("character/William/will vo3m.png", im.matrix.opacity(0.65))
     
     image smert = Solid("#980002")
 
@@ -97,7 +101,7 @@ label splashscreen:
     scene black
     with Pause(1)
 
-    show text "Предупреждение: в игре может содержаться ненормативная лексика" with dissolve
+    show text "Content Warning: Offensive language" with dissolve
     with Pause(2)
 
     hide text with dissolve
@@ -414,7 +418,7 @@ label start:
                     $ q.append(2)
                     $ renpy.block_rollback()
                     Will ghost ob "Молодой человек, мой ум постоянно вовлечен в сложную интеллектуальную деятельность."
-                    Will ghost ob "Мне некогда рассматривать каких-то девиц. Даже на портретах."
+                    Will ghost evil "Мне некогда рассматривать каких-то девиц. Даже на портретах."
 
     scene kabinet
     show will ghost ob at left
@@ -432,7 +436,7 @@ label start:
                 Will "Молодой человек, не разочаровывайте меня окончательно."
                 Will "Писательский труд суть чистое творение разумом вселенной."
                 Will "Вы чувствуете метафизическое очарование подобного определения?"
-                Will "Кто знает, быть может и мы - всего лишь персонажи чьей-то пьесы или прозы и говорим лишь то, что кто-то неведомый нам в уста вложил."
+                Will ghost o4ki "Кто знает, быть может и мы - всего лишь персонажи чьей-то пьесы или прозы и говорим лишь то, что кто-то неведомый нам в уста вложил."
             "Хочешь, расскажу тебе то, что ты не осознаешь?":
                 jump two3
             "Вы не знаете, Николас дописал перед смертью ту книгу, про которую делал объявление в прессе?" if not 3 in q:
@@ -456,7 +460,7 @@ label two1:
     show will ghost o4ki at left
 
     Will "Однако, вы умудрились истощить мое долгое терпение и окончательно меня разочаровать."
-    Will "Вы могли бы прочесть здесь произведения истинного гения, но предпочли писанину вашего деда."
+    Will ghost evil "Вы могли бы прочесть здесь произведения истинного гения, но предпочли писанину вашего деда."
     Will "Что ж, прах к праху. Признаюсь, когда я прочитал последний труд вашего деда, я ужаснулся.{w} Из всех книг, что он написал - это худшая, без сомнения."
     Will "Ради его репутации, я ее немножко подправил, точнее, основательно переписал."
     Will "Я отдам ее вам, но исключительно для того, чтобы вы оставили меня в покое."
@@ -503,7 +507,7 @@ label two2:
     a "Интересная история. Скажите, а что издали вы?"
     Will "Помилуйте, как некультурно спрашивать такое..."
     a "И все же, я настаиваю."
-    Will "Подите прочь..."
+    Will @ ghost evil "Подите прочь..."
     a "Вы ничего никогда не издавали и не писали."
     a "Ведь вы - всего лишь маска.{w} Вы - иллюзия гениальности."
     a "Вас создал мой дед и создал весьма занудным.{w} Ваша роль - быть барьером от страшной для него правды.  Той правды, что он никогда не был достоин этого статуса и славы."
@@ -532,10 +536,10 @@ label two3:
     Will "Дешевая интрига, молодой человек.{w} Дешевая интрига и неподобающий тон."
     Will "Ну что же, попробуйте, поразите меня."
     a "Ты - просто призрак моего выжившего из ума деда Николаса."
-    Will "Это возмутительно!{w} Как вы смеете! Вы перешли все границы!"
+    Will gost evil "Это возмутительно!{w} Как вы смеете! Вы перешли все границы!"
     Will "Убирайтесь отсюда, я больше не собираюсь лицезреть вашу отвратительную физиономию."
 
-    hide will ghost o4ki with dissolve
+    hide will ghost evil with dissolve
 
     a "По нему я точно не буду скучать.{w} Он действовал мне на нервы."
     a "Теперь надо разобраться с другими осколками непутевого деда."
@@ -673,6 +677,7 @@ label for:
             show leo ghost with move:
                 xalign 0.2
             leo "Я эгоист. Я ничтожество. Я убийца. Я заслужил муки."
+            show leo ghost pe4al
             leo "Пора перестать прятаться и принять свою участь в адском пламени."
             # INT Дверь в особняк.
             scene dver with wiperight
@@ -680,10 +685,9 @@ label for:
             play bgsfx3 "audio/breaking_door.ogg"
             a "Нет! Чертов урод! Давай же, поддавайся."
             stop bgsfx3 fadeout 1.0
-            # ГГ кашляет.
             play bgsfx3 "audio/coughing.ogg"
             scene smert with blod
-            # смерть
+            "Похоже, вы умерли от удушья даже раньше, чем от огня"
             jump end
 
         "Не вмешиваться":
@@ -702,6 +706,11 @@ label for:
             # Слышен женский смех.
             play audio "audio/female_laugh.ogg"
             scene kamin memory with memory
+            show sara live:
+                xalign 0.2
+            
+            show nic:
+                xalign 0.6
             s "А ну, не смей поддаваться!"
             s "Ну же, защищайся достойно! Я хочу поразить тебя в честной борьбе."
             d "Ты уже поразила меня однажды, любовь моя, и теперь ты всегда здесь, в моем сердце."
@@ -718,7 +727,7 @@ label for:
             g "Хочешь прибрать к рукам мой дом? Уже сговорилась со своими грязными дружками?"
             g "Лживая шлюха, я убью тебя!"
             # Каминная, наше время.
-            leo "Теперь ты понимаешь? Она верила в меня. Она единственная поддерживала меня. До конца."
+            leo ghost pe4al "Теперь ты понимаешь? Она верила в меня. Она единственная поддерживала меня. До конца."
             leo "Я никогда не смогу простить себя."
             # Мы слышим звуки игры на рояле.
             stop music
@@ -771,7 +780,7 @@ label for:
 label end:
 
     scene black with dissolve #или твоя сцена
-    show text "Разработка{p}{p}Сценаристы:{p}{p}Святослав Жиленко{p}Rimux vk.com/rimuxs{p}Наташа Титоренко{p}{p}Программисты:{p}{p}Анна Большекова{p}Giglemash github.com/Giglemash{p}Влад Ульрих{p}Саунд дизайнер:{p}Влад Ульрих{p}Художники:{p}Надежда Татаренкова vk.com/thekingdomofkai{p}satifobia artstation.com/satifobia{p}Матвей гробовой vk.com/3wy3wy{p}Дарья Волкова{p}Перевод:{p}Екатерина Огаркова{p}Святослав Жиленко{p}Помощь:{p}Оксана Мельникова{p}{p}{p}Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" at cred_up
+    show text "Сценаристы:{p}{p}Святослав Жиленко{p}Rimux vk.com/rimuxs{p}Наташа Титоренко{p}{p}Программисты:{p}{p}Анна Большекова vk.com/machaonorientis{p}Giglemash github.com/Giglemash{p}{p}Саунд дизайнер:{p}{p}Vlad Ulrich github.com/Wedmer{p}{p}Художники:{p}{p}Надежда Татаренкова vk.com/thekingdomofkai{p}satifobia artstation.com/satifobia{p}Матвей Гробовой vk.com/3wy3wy{p}Дарья Волкова{p}{p}Перевод:{p}{p}Святослав Жиленко{p}{p}Помощь:{p}{p}Оксана Мельникова{p}{p}{p}Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" at cred_up
     $ renpy.pause(8, hard = True)
     
     return
