@@ -8,7 +8,7 @@ define Will = Character("Уильям", color='#990066', image = "will")
 # Лягушка в обмороке (серенький)
 define leo = Character("Лайонель", color='#7b917b', image = "leo")
 # Макароны и сыр (розовенький)
-define g = Character("Грегори", color='#ffbd88')
+define g = Character("Грегори", color='#ffbd88', image = "greg")
 # Влюбленная жаба (зелененький)
 define s = Character("Сара", color='#3caa3c')
 # Яйцо дрозда (бирюзовый)
@@ -33,7 +33,9 @@ define sc17two = False
 init:
     $ noisedissolve = ImageDissolve(im.Tile("images/noisetile.png"), 1.0, 1)
 # hide screen daytime with noisedissolve
-
+    $ blod = ImageDissolve(im.Tile("blod.png"), 3.0, 30, reverse=False)
+    $ memory = ImageDissolve(im.Tile("memory.png"), 2.0, 20)
+    $ flash2 = ImageDissolve(im.Tile("flash.png"), 2.0, 20)
 init:
     image koridor2 = "location/koridor"
     image kamin2 = "kamin"
@@ -49,16 +51,28 @@ screen daytime:
 init:
     image gregory normal = "character/Gregory/gregor normal.png"
     image greg normal = im.MatrixColor ("character/Gregory/gregor normal.png", im.matrix.opacity(0.75))
+    image gregor ghost1 = "character/Gregory/greg 2.png"
+    image greg ghost = im.MatrixColor ("character/Gregory/greg 2.png", im.matrix.opacity(0.65))
+    image gregor ghost2 = "character/Gregory/greg 3.png"
+    image greg ghost smile = im.MatrixColor ("character/Gregory/greg 3.png", im.matrix.opacity(0.65))
+    image gregor ghost3 = "character/Gregory/greg 1.png"
+    image greg ghost evil smile = im.MatrixColor ("character/Gregory/greg 1.png", im.matrix.opacity(0.65))
+    image gregor ghost4 = "character/Gregory/greg 4.png"
+    image greg ghost enemy = im.MatrixColor ("character/Gregory/greg 4.png", im.matrix.opacity(0.65))
+    
     image lionel1 = "character/Lionel/leo normal.png"
     image leo ghost = im.MatrixColor ("character/Lionel/leo normal.png", im.matrix.opacity(0.65))
     image lionel2 = "character/Lionel/leo vspom.png"
     image leo ghost vspom = im.MatrixColor ("character/Lionel/leo vspom.png", im.matrix.opacity(0.65))
+    
     image william1 = "character/William/will na gg.png"
     image will ghost = im.MatrixColor ("character/William/will na gg.png", im.matrix.opacity(0.65))
     image william2 = "character/William/will 3apisi.png"
     image will ghost ob = im.MatrixColor ("character/William/will 3apisi.png", im.matrix.opacity(0.65))
     image william3 = "character/William/will o4ki.png"
     image will ghost o4ki = im.MatrixColor ("character/William/will o4ki.png", im.matrix.opacity(0.65))
+    
+    image black = Solid("#1b1116")
 
 init:
     $ flash = Fade(.25, 0, .75, color="#fff8dc")
@@ -271,13 +285,13 @@ label start:
         "Надо внимательнее исследовать кабинет":
             $ sc10one = True
             scene kabinet
-            show will ghost ob
+            show will ghost ob at left
             a "Эй, ты кто вообще такой? Что ты тут забыл?"
             n "Тише, тише, молодой человек, не надо так орать, будто вы до мертвых добудиться хотите.{w} Позвольте представиться: Уильям, мастер слова и пера."
             Will "Кстати, как вам этот отрывок:" 
             Will "«Ход его рассуждений прервался, и он увидел бесконечную тьму ее разума, лишенного всяческого сострадания. Она была безжалостным хищником, мифической сиреной, одержимой неутолимой жаждой губить души...»"
             a "Вы знакомый моего деда Николаса?"
-            show will ghost
+            show will ghost at left
             Will "Конечно, я знал его всю свою жизнь."
             Will "Ах, бедный, бедный Николас. Какое счастье, что он покинул свою скорбную юдоль позора..."
             a "Тогда, может, поможете мне выйти отсюда?"
@@ -292,13 +306,13 @@ label start:
         "Будет лучше пойти еще дальше по коридору второго этажа":
             $ sc10two = True
             scene orujka
-            # персонаж
+            show greg ghost
             a "Ты еще кто такой?"
             g "Я - Грегори, а ты - мерзкий вор."
             g "Думал, раз людишки вроде тебя свели Николаса в могилу, то ты можешь спокойно шнырять по его дому?"
             g "Позарился на чужое?"
-            g "Убирайся отсюда!"
-
+            g ghost smile "Убирайся отсюда!"
+ 
             scene orujka
             with fade
 
@@ -404,7 +418,7 @@ label start:
                     Will ghost ob "Мне некогда рассматривать каких-то девиц. Даже на портретах."
 
     scene kabinet
-    show will ghost ob
+    show will ghost ob at left
     $ q = []
     while len(q) < 3:
         menu:
@@ -433,14 +447,14 @@ label start:
             $ sc15two = True
             jump two2
 
-    # This ends the game.
+ 
 
     return
 
 label two1:
 
     scene kabinet
-    show will ghost o4ki
+    show will ghost o4ki at left
 
     Will "Однако, вы умудрились истощить мое долгое терпение и окончательно меня разочаровать."
     Will "Вы могли бы прочесть здесь произведения истинного гения, но предпочли писанину вашего деда."
@@ -474,7 +488,7 @@ label two1:
 label two2:
 
     scene kabinet
-    show will ghost ob
+    show will ghost ob at left
 
     Will "Я понимаю, сложно смотреть объективно из-за уз родства,{w} но прошу вас, не стоит быть таким наивным."
     a "Дед написал минимум один бестселлер, общепризнанно вошедший в классику литературы."
@@ -514,7 +528,7 @@ label two2:
 label two3:
 
     scene kabinet
-    show will ghost o4ki
+    show will ghost o4ki at left
 
     Will "Дешевая интрига, молодой человек.{w} Дешевая интрига и неподобающий тон."
     Will "Ну что же, попробуйте, поразите меня."
@@ -534,6 +548,7 @@ label two3:
 label three:
 
     scene orujka
+    show greg ghost smile
 
     if sc10two:
         n "Такая изысканная шпага так долго лежала без дела.{w} Это неправильно."
@@ -541,17 +556,17 @@ label three:
         n "Но, вижу, сегодня настал ее час.{w} Страшно?{w} Страшно, я же вижу."
         a "Ты кто?"
         n "Я? Меня зовут Грегори, неприятно познакомиться."
-        g "Я - уничтожитель всего, что смело когда-либо причинять боль несчастному Николасу."
+        g ghost evil smile "Я - уничтожитель всего, что смело когда-либо причинять боль несчастному Николасу."
         g "Теперь я охраняю его наследство.{w} А еще я твой будущий убийца."
     else:
         g "Такая изысканная шпага так долго лежала без дела. Это неправильно."
         g "Оружие должно отнимать жизни. А этой шпагой я уже давно никого не убивал."
         g "Но, вижу, сегодня настал ее час. Страшно? Страшно, я же вижу."
-        g "Ну давай, закрой глазки ручками, это поможет..."
+        g ghost enemy "Ну давай, закрой глазки ручками, это поможет..."
 
     menu:
         "Ублюдок, ты не смеешь так со мной разговаривать! А ну пошел прочь!":
-            g "Сейчас ты заплатишь за эти слова! Защищайся!"
+            g ghost enemy "Сейчас ты заплатишь за эти слова! Защищайся!"
             transform alpha_dissolve:
                 alpha 0.0
                 linear 0.5 alpha 1.0
@@ -560,8 +575,8 @@ label three:
             screen countdown:
                 timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
                 bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve
-            $ time = 0.8
-            $ timer_range = 1
+            $ time = 0.7
+            $ timer_range = 0.7
             $ timer_jump = 'deadone'
             show screen countdown
             menu:
@@ -570,7 +585,7 @@ label three:
                     $ sc17one = True
                     jump for
         "Эта шпага кого-то уже отнимала чью-то жизнь?":
-            g "Да, какая-то тварь не отсюда. Пыталась предать Николаса, плела тут вокруг свои сети коварства."
+            g ghost enemy "Да, какая-то тварь не отсюда. Пыталась предать Николаса, плела тут вокруг свои сети коварства."
             g "Я даже не потрудился запомнить, как ее звали."
             g "Думаю, тебя я тоже не запомню..."
             a "Ты убил... женщину?"
@@ -578,10 +593,10 @@ label three:
             menu:
                 "Я - внук и законный наследник Николаса. Я пришел за своим.":
                     $ sc17two = True
-                    g "Надо же. Внук, наследник..."
+                    g ghost smile "Надо же. Внук, наследник..."
                     g "Где же ты был, внук, когда твоему деду было так плохо?{w} Когда все ополчились против него?{w} Отчего не навестил?"
                     g "Зато стоило миленькому дорогому особнячку освободиться, и наш герой уже здесь."
-                    g "Что ж, прошу вас, наследник, возьмите то, что вам причитается. Удачного владения!"
+                    g ghost evil smile "Что ж, прошу вас, наследник, возьмите то, что вам причитается. Удачного владения!"
                     menu:
                         "Получены документы на дом":
                             scene dom
@@ -589,21 +604,22 @@ label three:
                     # Документ в дырках
                 "И что, хорошо ты защитил моего деда, раз он страдал до самой смерти?":
                     $ three = True
-                    g "Что ты знаешь вообще?"
+                    g ghost evil smile "Что ты знаешь вообще?"
                     a "Знаю то, что ты - лишь инструмент. Как эта шпага."
                     a "Дед пользовался тобой, чтобы и дальше себя жалеть."
+                    show greg ghost
                     a "За твоей агрессией так удобно было прятать слабость."
                     a "Из-за тебя его все бросили, ты всех распугал, а дед выл от одиночества."
                     a "Так кого ты защитил, Грегори?{w} И от того ли надо было защищать?"
                     a "Ты не справился."
                     a "Ты должен был научить деда защищаться самостоятельно."
-                    g "Ты... я ненавижу тебя, но ты, черт возьми, прав."
+                    g ghost smile "Ты... я ненавижу тебя, но ты, черт возьми, прав."
                     g "Спасибо.{w} Ты показал мне правду, и теперь я свободен."
                     g "Ты будешь хорошим наследником."
                     g "Надеюсь, ты найдешь книгу Николаса, и все войдет в привычную колею."
                     g "Для меня было честью встретить тебя,{w} хотя для нас обоих эта встреча и не была приятной."
-                    g "Прощай."
-
+                    g normal "Прощай."
+                    hide greg normal with dissolve
     jump for
 
     return
@@ -613,8 +629,11 @@ label deadone:
 
     # Звуки пронзания
     play audio "audio/flesh_penetration.ogg"
-    # Черный экран
-    # Конец
+    scene black with blod:
+        alpha 1.0
+        time 1.5
+        linear 3.0 alpha 1.0
+    ""
 
     return
 
@@ -636,7 +655,7 @@ label for:
 
     scene kamin
 
-    show leo ghost
+    show leo ghost at right
 
     leo "Так странно.{w} Этот камин не разжигали уже очень давно."
     leo @ ghost vspom "Я все-таки узнал тебя.{w} Ты - внук Николаса, верно?"
@@ -651,17 +670,19 @@ label for:
             a "Тебя никогда не интересовал кто-либо кроме себя.{w} Ты и сюда прибежал, чтобы жалеть себя."
             a "Ты сам во всем виноват и заслужил все, что с тобой произошло."
             leo "Ты прав. Абсолютно."
+            show leo ghost:
+                xalign 0.2
             leo "Я эгоист. Я ничтожество. Я убийца. Я заслужил муки."
             leo "Пора перестать прятаться и принять свою участь в адском пламени."
             # INT Дверь в особняк.
-            scene kabinet
+            scene kabinet with wiperight
             # Слышны звуки ударов в дверь.
             play bgsfx3 "audio/breaking_door.ogg"
             a "Нет! Чертов урод! Давай же, поддавайся."
             stop bgsfx3 fadeout 1.0
             # ГГ кашляет.
             play bgsfx3 "audio/coughing.ogg"
-            # Экран темнеет.
+            scene black with blod
             # смерть
             
 
@@ -680,7 +701,7 @@ label for:
             hide leo ghost
             # Слышен женский смех.
             play audio "audio/female_laugh.ogg"
-
+            scene dom with memory
             s "А ну, не смей поддаваться!"
             s "Ну же, защищайся достойно! Я хочу поразить тебя в честной борьбе."
             d "Ты уже поразила меня однажды, любовь моя, и теперь ты всегда здесь, в моем сердце."
