@@ -40,17 +40,17 @@ init:
     image koridor2 = "location/koridor"
     image kamin2 = "kamin"
     image kabinet2 = "kabinet"
-    $ dt = "утро"
+    $ dt = "ночь"
 screen daytime:
-    if dt == "утро":
-        add "#00000000"
+    if dt == "пыль":
+        add "#7679"
     if dt == "ночь":
         add "#000b"
 
 
 init:
     image gregory normal = "character/Gregory/gregor normal.png"
-    image greg normal = im.MatrixColor ("character/Gregory/gregor normal.png", im.matrix.opacity(0.75))
+    image greg normal = im.MatrixColor ("character/Gregory/gregor normal.png", im.matrix.opacity(0.65))
     image gregor ghost1 = "character/Gregory/greg 2.png"
     image greg ghost = im.MatrixColor ("character/Gregory/greg 2.png", im.matrix.opacity(0.65))
     image gregor ghost2 = "character/Gregory/greg 3.png"
@@ -72,7 +72,7 @@ init:
     image william3 = "character/William/will o4ki.png"
     image will ghost o4ki = im.MatrixColor ("character/William/will o4ki.png", im.matrix.opacity(0.65))
     
-    image black = Solid("#1b1116")
+    image smert = Solid("#980002")
 
 init:
     $ flash = Fade(.25, 0, .75, color="#fff8dc")
@@ -87,15 +87,17 @@ init:
     $ renpy.music.register_channel("bgsfx3", mixer="sfx", loop=False, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
     $ renpy.music.register_channel("bgsfx4", mixer="sfx", loop=False, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=True)
 
+
 init:
-    $ noisedissolve = ImageDissolve(im.Tile("noisetile.png"), 1.0, 1)
-# hide screen daytime with noisedissolve
+    transform cred_up:
+        yalign 1.5
+        linear 10 yalign -0.5
 
 label splashscreen:
     scene black
     with Pause(1)
 
-    show text "American Bishoujo представляет..." with dissolve
+    show text "Предупреждение: в игре может содержаться ненормативная лексика" with dissolve
     with Pause(2)
 
     hide text with dissolve
@@ -112,7 +114,7 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene dom
+    scene news
 
     # Газета
 
@@ -122,7 +124,7 @@ label start:
     a "Одни писали, что всему виной девочка-хиппи и наркота, а другие сплетничали о тяжелом алкоголизме."
     a "Мне, если честно, все равно."
 
-    # Показать фото дома
+    scene dom photo with flash2
 
     a "Я не видел его с самого детства.  Все воспоминания о нем - светлые,{w} но в детстве все кажутся хорошими."
     a "Факт в том, что дед бросил нас с матерью, когда нам было очень тяжело после смерти отца. Мама не говорила мне, но она часто писала деду, просила о помощи."
@@ -132,7 +134,7 @@ label start:
 
 # Сам особняк
 
-    scene dom
+    scene dom with memory
 
     a "Теперь я - единственный наследник этого... человека. После смерти матери меня в этой дыре ничего не держит."
     a "Кроме плохих воспоминаний."
@@ -155,8 +157,9 @@ label start:
     a "Это меняет дело. Так денег хватит даже на целую экспедицию..."
 
 # Каминная светлая
-
+    show screen daytime
     scene kamin
+    $ dt = "пыль"
 
     a "Тут... довольно мило, но довольно пыльно. Надо осмотреться."
 
@@ -164,21 +167,19 @@ label start:
 
     a "Он... хранил нашу фотографию? Зачем? Любовался теми, кого бросил?"
     a "Похоже, сплетни не врали. Старый развратник. На вид она ничего так... Не ради ли тебя наш дед забыл о нашей семье? Хотя... если он так легко выкинул нас из сердца, то проблема тут явно не в ней..."
-    a "Дед... служил? Никогда не слышал об этом. Наверное, просто бутафория."
+    # a "Дед... служил? Никогда не слышал об этом. Наверное, просто бутафория."
     a "А там и недопитые бутылки. Значит, и это правда. Вот и истина в вине... Жалкий оказался человек..."
 
-# Рояльная
+    scene royal
 
     a "Хм... толстый слой пыли на клавишах. Никто не играл на нем уже много лет. Очередной бессмысленный предмет."
     play sound "audio/thunder.ogg"
-    show screen daytime
-    scene kamin
-    $ dt = "ночь"
+    scene royal
 
 # Удар грома
 
     with flash
-
+    $ dt = "ночь"
 # Темная каминная
 
     ""
@@ -190,7 +191,6 @@ label start:
     $ renpy.music.set_volume(.3, delay=0, channel='bgsfx1')
     play bgsfx1 "audio/breath.ogg" loop
     scene koridor
-
 # Дыхание ГГ и скрип половиц
 
     a "Где же они? Черт!"
@@ -206,19 +206,22 @@ label start:
 
     stop bgloop fadeout 1.0
 # Усиление шепота
-
+    stop music
+    play music "audio/sound_piano.ogg"
+    play audio "audio/rain.ogg"
     $ renpy.music.set_volume(.7, delay=0, channel='bgsfx2')
 
 # Кабинет со свечей
 
-    scene kabinet:
+    scene kabinet no light with fade:
         alpha 1.0
         time 1.5
         linear 3.0 alpha 1.0
 
+    a "Это напрягает."
+    scene kabinet light
     hide screen daytime
-
-    a "Это напрягает. Кто, черт возьми, зажег эту свечу?{w} Сюда что, кто-то вломился? Надо звонить копам."
+    a "Кто, черт возьми, зажег эту свечу?{w} Сюда что, кто-то вломился? Надо звонить копам."
     a "Черт, мобильная связь тоже накрылась. Что за жесть такая тут происходит? Лучше уйти отсюда. Возьму свечу, а то с той лестницы можно и навернуться ненароком."
 
 # Тихий смех и еще более громкий шепот
@@ -245,26 +248,25 @@ label start:
 
 # Дверь с расстворяющимся призраком
 
-    scene kabinet
+    scene dver
     with wiperight
 
     show greg normal at center:
-        alpha 0.3
-    with dissolve
+        alpha 0.45
+
 
     a "Твою..."
-    hide greg normal
+    hide greg normal with dissolve
 
-    scene kamin
-    with wipeleft
+    scene kamin with wipeleft
 
     a "Что это было? Что? Он... он не мог просто исчезнуть, я отвернулся на секунду. Что за?.. Черт, надо убираться отсюда."
 
 # Дверь. Слышим звуки судорожно поворачиваемой ручки
     play sound "audio/door_knob_rattling.ogg" loop
-    scene kabinet:
+    scene dver:
         alpha 1.0
-        time 1.0
+        time 2.0
         linear 3.0 alpha 1.0
 
     a "Черт, она заперта! Как? Как это возможно?"
@@ -343,7 +345,7 @@ label start:
 
 # разожженный камин.
 
-    scene kamin
+    scene kamin fire
     hide screen daytime
 
 # Тяжелое дыхание
@@ -357,15 +359,12 @@ label start:
 
 # Письмо
 
-    show screen daytime
-    scene dom
-    $ dt = "утро"
+    scene bumaga with noisedissolve
 
     a "Любопытно. Значит, дед был серьезно болен... Это, конечно, его не оправдывает, но..."
     a "И что, эти его субличности смогли как-то воплотиться после смерти? Жуть какая."
 
-    hide screen daytime with noisedissolve
-    scene kamin
+    scene kamin fire
 
     a "Похоже, и вправду попал в дом с привидениями. Или в готический роман. Эдгар, ты балуешься?"
     a "Ха. А дед и из могилы смог доставить хлопот. Но, похоже, сошел с ума все-таки не я."
@@ -471,7 +470,7 @@ label two1:
 # Страница
     menu:
         "Получена книга вашего деда":
-            scene dom
+            scene kniga
             a "Тут... одно и то же..."
 
     stop bgsfx1 fadeout 1.0
@@ -599,7 +598,7 @@ label three:
                     g ghost evil smile "Что ж, прошу вас, наследник, возьмите то, что вам причитается. Удачного владения!"
                     menu:
                         "Получены документы на дом":
-                            scene dom
+                            scene doc
                             a "Да он просто издевается!"
                     # Документ в дырках
                 "И что, хорошо ты защитил моего деда, раз он страдал до самой смерти?":
@@ -629,12 +628,13 @@ label deadone:
 
     # Звуки пронзания
     play audio "audio/flesh_penetration.ogg"
-    scene black with blod:
+    scene smert with blod:
         alpha 1.0
         time 1.5
         linear 3.0 alpha 1.0
-    ""
-
+    "Вы не успели уклониться. Похоже, шпага пронзила ваше сердце."
+    jump end
+    
     return
 
 label for:
@@ -653,7 +653,7 @@ label for:
         a "Третий должен быть в каминной, я его видел именно там."
         a "Черт, призраки, привязанные к одному месту - какое клише!"
 
-    scene kamin
+    scene kamin fire
 
     show leo ghost at right
 
@@ -670,21 +670,21 @@ label for:
             a "Тебя никогда не интересовал кто-либо кроме себя.{w} Ты и сюда прибежал, чтобы жалеть себя."
             a "Ты сам во всем виноват и заслужил все, что с тобой произошло."
             leo "Ты прав. Абсолютно."
-            show leo ghost:
+            show leo ghost with move:
                 xalign 0.2
             leo "Я эгоист. Я ничтожество. Я убийца. Я заслужил муки."
             leo "Пора перестать прятаться и принять свою участь в адском пламени."
             # INT Дверь в особняк.
-            scene kabinet with wiperight
+            scene dver with wiperight
             # Слышны звуки ударов в дверь.
             play bgsfx3 "audio/breaking_door.ogg"
             a "Нет! Чертов урод! Давай же, поддавайся."
             stop bgsfx3 fadeout 1.0
             # ГГ кашляет.
             play bgsfx3 "audio/coughing.ogg"
-            scene black with blod
+            scene smert with blod
             # смерть
-            
+            jump end
 
         "Не вмешиваться":
             leo ghost vspom "Я не должен жить."
@@ -701,7 +701,7 @@ label for:
             hide leo ghost
             # Слышен женский смех.
             play audio "audio/female_laugh.ogg"
-            scene dom with memory
+            scene kamin memory with memory
             s "А ну, не смей поддаваться!"
             s "Ну же, защищайся достойно! Я хочу поразить тебя в честной борьбе."
             d "Ты уже поразила меня однажды, любовь моя, и теперь ты всегда здесь, в моем сердце."
@@ -723,7 +723,7 @@ label for:
             # Мы слышим звуки игры на рояле.
             stop music
             play music "audio/piano_loop.ogg"
-            # вид рояля
+            scene royal
             s "Ты не виноват, и я тебя никогда не винила."
             s "Это был не ты, а твой недуг, выпестованный жестоким миром. Ты помнишь, как много боли тебе нанесли?"
             leo "Сара... я был слишком слаб.{w} Я должен был справиться..."
@@ -763,5 +763,15 @@ label for:
             # исчезновение
             # Конец. Титры.
 
+    jump end
 
+    return
+    
+    
+label end:
+
+    scene black with dissolve #или твоя сцена
+    show text "Разработка{p}{p}Сценаристы:{p}{p}Святослав Жиленко{p}Rimux vk.com/rimuxs{p}Наташа Титоренко{p}{p}Программисты:{p}{p}Анна Большекова{p}Giglemash github.com/Giglemash{p}Влад Ульрих{p}Саунд дизайнер:{p}Влад Ульрих{p}Художники:{p}Надежда Татаренкова vk.com/thekingdomofkai{p}satifobia artstation.com/satifobia{p}Матвей гробовой vk.com/3wy3wy{p}Дарья Волкова{p}Перевод:{p}Екатерина Огаркова{p}Святослав Жиленко{p}Помощь:{p}Оксана Мельникова{p}{p}{p}Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" at cred_up
+    $ renpy.pause(8, hard = True)
+    
     return
