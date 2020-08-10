@@ -447,8 +447,9 @@ label start:
                 Will "Писательский труд суть чистое творение разумом вселенной."
                 Will "Вы чувствуете метафизическое очарование подобного определения?"
                 Will ghost o4ki "Кто знает, быть может и мы - всего лишь персонажи чьей-то пьесы или прозы и говорим лишь то, что кто-то неведомый нам в уста вложил."
-            "Хочешь, расскажу тебе то, что ты не осознаешь?":
-                jump two3
+                menu:
+                    "Хочешь, расскажу тебе то, что ты не осознаешь?":
+                        jump two3
             "Вы не знаете, Николас дописал перед смертью ту книгу, про которую делал объявление в прессе?":
                 Will "Да, Николас успел закончить свой скорбный и не самый изысканный труд."
                 menu:
@@ -544,7 +545,7 @@ label two3:
     Will "Дешевая интрига, молодой человек.{w} Дешевая интрига и неподобающий тон."
     Will "Ну что же, попробуйте, поразите меня."
     a "Ты - просто призрак моего выжившего из ума деда Николаса."
-    Will gost evil "Это возмутительно!{w} Как вы смеете! Вы перешли все границы!"
+    Will ghost evil "Это возмутительно!{w} Как вы смеете! Вы перешли все границы!"
     Will "Убирайтесь отсюда, я больше не собираюсь лицезреть вашу отвратительную физиономию."
 
     hide will ghost evil with dissolve
@@ -759,6 +760,8 @@ label for:
                     "Получены документы на дом и книга":
                         d "Вот, я отдаю эти документы. Теперь ты - хозяин этого дома. И я хочу отдать тебе свою последнюю книгу, посмертный труд."
                         d "Распорядись этим так, как сочтешь нужным. Ты доказал, что умеешь принимать мудрые решения."
+                        show nic ghost with move:
+                            xalign 0.4
                         d "А теперь позволь мне уйти с любимой."
 
             else:
@@ -780,8 +783,6 @@ label for:
             show sara ghost with move:
                 xalign 0.5
             s "Как же долго я ждала этого пиршества. И вот оно наступило."
-            show nic ghost with move:
-                xalign 0.4
             s "Хотя из-за твоего несмышленого внука я так и не получила всего Николаса, но и ты сгодишься, сладкий."
 
             # исчезновение
@@ -795,7 +796,7 @@ label for:
 label end:
 
     scene black with dissolve #или твоя сцена
-    show text "Сценаристы:{p}{p}Святослав Жиленко{p}Rimux vk.com/rimuxs{p}Наташа Титоренко{p}{p}Программисты:{p}{p}Анна Большекова vk.com/machaonorientis{p}Giglemash github.com/Giglemash{p}{p}Саунд дизайнер:{p}{p}Vlad Ulrich github.com/Wedmer{p}{p}Художники:{p}{p}Надежда Татаренкова vk.com/thekingdomofkai{p}satifobia artstation.com/satifobia{p}Матвей Гробовой vk.com/3wy3wy{p}Дарья Волкова{p}{p}Перевод:{p}{p}Святослав Жиленко{p}{p}Помощь:{p}{p}Оксана Мельникова{p}{p}{p}Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" at cred_up
-    $ renpy.pause(8, hard = True)
+    show text "Project manager:{p}{p}Анна Большекова vk.com/machaonorientis{p}{p}Leading scriptwriter:{p}{p}Святослав Жиленко{p}{p}Scriptwriters:{p}{p}Rimux vk.com/rimuxs{p}Наташа Титоренко{p}{p}Developers:{p}{p}Анна Большекова vk.com/machaonorientis{p}Giglemash github.com/Giglemash{p}{p}Sound designer:{p}{p}Vlad Ulrich github.com/Wedmer{p}{p}Artists:{p}{p}Надежда Татаренкова vk.com/id233584860{p}satifobia artstation.com/satifobia{p}Матвей Гробовой vk.com/theory_of_ninja{p}Дарья Волкова{p}{p}Translators:{p}{p}Святослав Жиленко{p}{p}Thanks for the help:{p}{p}Оксана Мельникова{p}Andrew «Prol» Ponomarev author.today/u/andrewponomarev{p}{p}{p}{p}{p}Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" at cred_up
+    $ renpy.pause(14, hard = True)
     
     return

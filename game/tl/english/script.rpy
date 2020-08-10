@@ -802,7 +802,7 @@ translate english two2_76d66a7b:
 translate english two2_981da51a:
 
     # Will "Прискорбно признавать, но похоже, я - лишь красивая обложка, за которой тщетная пустота."
-    Will "Regrettably, I have to recognize that I am a beautiful cover with nothing underneath"
+    Will "Regrettably, I have to recognize that I am a beautiful cover with nothing underneath."
 
 # game/script.rpy:514
 translate english two2_4df86fa9:
@@ -910,7 +910,7 @@ translate english three_7ec4c9b4:
 translate english three_80eb16e2:
 
     # g ghost evil smile "Я - уничтожитель всего, что смело когда-либо причинять боль несчастному Николасу."
-    g ghost evil smile "I was an eradicator of everything that inflicted pain to poor Nicholas."
+    g ghost evil smile "I was an eradicator of everything that inflicted pain on poor Nicholas."
 
 # game/script.rpy:559
 translate english three_0842cebd:
@@ -988,19 +988,19 @@ translate english three_f7858457:
 translate english three_c0b4b693:
 
     # g "Где же ты был, внук, когда твоему деду было так плохо?{w} Когда все ополчились против него?{w} Отчего не навестил?"
-    g "Where were you, grandson, when your grandfather was so bad? When did everyone take up arms against him? Why didn't you visit?"
+    g "Where were you, grandson, when your grandfather suffered? When did everyone hated him? Why didn't you come?"
 
 # game/script.rpy:597
 translate english three_6f4aee89:
 
     # g "Зато стоило миленькому дорогому особнячку освободиться, и наш герой уже здесь."
-    g "But as soon as a nice little expensive mansion gets free, our hero is already here."
+    g "But as soon as a nice expensive mansion gets vacant, our hero is already here."
 
 # game/script.rpy:598
 translate english three_8db88f5a:
 
     # g ghost evil smile "Что ж, прошу вас, наследник, возьмите то, что вам причитается. Удачного владения!"
-    g ghost evil smile "Well, please, heir, take what is due to you. Happy ownership!"
+    g ghost evil smile "Well, please, heir, take what belongs to you. Happy ownership!"
 
 # game/script.rpy:602
 translate english three_da8ea192:
@@ -1024,13 +1024,13 @@ translate english three_a6ddb24a:
 translate english three_01e71b2f:
 
     # a "Дед пользовался тобой, чтобы и дальше себя жалеть."
-    a "Grandpa used you to continue feeling sorry for himself."
+    a "Grandpa used you to continue indulging himself."
 
 # game/script.rpy:610
 translate english three_ac55c582:
 
     # a "За твоей агрессией так удобно было прятать слабость."
-    a "It was so convenient to hide the weakness behind aggression."
+    a "It was so convenient for him to hide his weakness behind your aggression."
 
 # game/script.rpy:611
 translate english three_41934ad4:
@@ -1042,25 +1042,25 @@ translate english three_41934ad4:
 translate english three_2721609c:
 
     # a "Так кого ты защитил, Грегори?{w} И от того ли надо было защищать?"
-    a "So who did you protect, Gregory?{w} And was that even necessary to protect?"
+    a "So who did you protect, Gregory? And was that even necessary to protect?"
 
 # game/script.rpy:613
 translate english three_60e353c7:
 
     # a "Ты не справился."
-    a "You didn't do it."
+    a "You failed."
 
 # game/script.rpy:614
 translate english three_d8423c21:
 
     # a "Ты должен был научить деда защищаться самостоятельно."
-    a "You should have taught your grandpa to defend yourself."
+    a "You should have taught my grandpa to defend himself."
 
 # game/script.rpy:615
 translate english three_2f32598c:
 
     # g ghost smile "Ты... я ненавижу тебя, но ты, черт возьми, прав."
-    g ghost smile "You ... I hate you, but you're damn right."
+    g ghost smile "You... I hate you, but you're damn right."
 
 # game/script.rpy:616
 translate english three_3c7ca212:
@@ -1072,13 +1072,13 @@ translate english three_3c7ca212:
 translate english three_ee5fde59:
 
     # g "Ты будешь хорошим наследником."
-    g "You will be a good heir."
+    g "You’ll be a good heir."
 
 # game/script.rpy:618
 translate english three_f68523ea:
 
     # g "Надеюсь, ты найдешь книгу Николаса, и все войдет в привычную колею."
-    g "I hope you find Nicholas's book and everything goes back to normal."
+    g "I hope you’ll find Nicholas's book and everything goes back to the track."
 
 # game/script.rpy:619
 translate english three_590c684c:
@@ -1108,13 +1108,13 @@ translate english for_31c4a14f:
 translate english for_8685c4f3:
 
     # a "Сам не ожидал, что смогу так ловко увернуться. Как будто в детстве меня учили пируэтам. Может дед и учил? И этим спас меня от своей же агрессивной части?"
-    a "I did not expect that I could dodge so deftly. As if I was taught pirouettes as a child. Maybe  grandfather taught? And by this, he saved me from his aggressive part?"
+    a "I did not expect that I could dodge so deftly. As if I was taught pirouettes as a child. Maybe grandfather taught? And by this, he saved me from his aggressive part? Ironically."
 
 # game/script.rpy:647
 translate english for_dc3dc7c9:
 
     # a "Ладно, черт с этим Грегори, пойду в каминную, может третий будет адекватнее."
-    a "Okay, fuck that Gregory, I'll go to the fireplace, maybe the third one will be more adequate."
+    a "Okay, fuck that Gregory, I'll go to the living room, maybe the third one will be more adequate."
 
 # game/script.rpy:651
 translate english for_c61c6149:
@@ -1132,14 +1132,14 @@ translate english for_f7ec812f:
 translate english for_f036e928:
 
     # a "Третий должен быть в каминной, я его видел именно там."
-    a "The third one should be in the fireplace, I saw him there."
+    a "The third one should be in the living room, I’ve seen him there."
 
 # game/script.rpy:654
 translate english for_8e55e6cb:
 
     # a "Черт, призраки, привязанные к одному месту - какое клише!"
     a "Damn, ghosts bounded to one place - such a cliché!"
-
+    
 # game/script.rpy:660
 translate english for_452646e3:
 
@@ -1162,7 +1162,7 @@ translate english for_8714ef24:
 translate english for_71e90170:
 
     # leo "Пойми, Николас... мы не можем, не должны находиться рядом с теми, кто нам дорог. Поэтому я просил Николаса прекратить общение с тобой."
-    leo "Understand, Nicholas... we cannot, should not be near those who are dear to us. So I asked Nicholas to stop communicating with you."
+    leo "Understand, Nicholas we cannot, should not be near those who are dear to us. So I asked Nicholas to stop communicating with you."
 
 # game/script.rpy:664
 translate english for_eb0dd1dc:
@@ -1174,19 +1174,19 @@ translate english for_eb0dd1dc:
 translate english for_7f903578:
 
     # a "Дед, мне надоели твои игры и не нужны твои оправдания."
-    a "Geezer, I'm tired of your games and I don't need your excuses."
+    a "Grandfather, I'm tired of your games and I don't need your excuses."
 
 # game/script.rpy:669
 translate english for_b8527e09:
 
     # a "Ты оставил меня, забыв о моих чувствах, поэтому не требуй от меня заботы о твоих."
-    a "You left me, forgot about my feelings, so wait me to take care of yours."
+    a "You left me and by doing so expressed no respect for my feelings, so don’t demand to take care of yours."
 
 # game/script.rpy:670
 translate english for_c7661d0f:
 
     # a "Тебя никогда не интересовал кто-либо кроме себя.{w} Ты и сюда прибежал, чтобы жалеть себя."
-    a "You have never been interested in anyone other than yourself. You even came here to self-pity."
+    a "You have never been interested in anyone except yourself. You even came here to nourish self-pity."
 
 # game/script.rpy:671
 translate english for_08c5e2d5:
@@ -1228,7 +1228,7 @@ translate english for_43c8bd45:
 translate english for_ea3d59de:
 
     # leo "Я пытался... уйти... но эти двое так и не дали мне довести ту попытку до конца."
-    leo "I tried... to leave... but these two never let me do it"
+    leo "I tried to leave but these two never let me do it"
 
 # game/script.rpy:692
 translate english for_a64b37d6:
@@ -1276,7 +1276,7 @@ translate english for_d5a91fca:
 translate english for_52d62a65:
 
     # leo "Мне нет прощения.{w} Я ведь убил мою Сару... сам убедись, как это было ужасно."
-    leo "There is no forgiveness.{w} I’ve killed my Sarah... see for yourself how awful it was."
+    leo "There is no forgiveness.{w} I’ve killed my Sarah see for yourself how awful it was."
 
 # game/script.rpy:705
 translate english for_363e527b:
@@ -1300,7 +1300,7 @@ translate english for_e6bd353c:
 translate english for_d6b3a2e1:
 
     # s "Ах, ты невыносимо галантен."
-    s "Ah, you are unbearably gallant"
+    s "Ah, you are unbearably gallant."
 
 # game/script.rpy:709
 translate english for_0fbd6bab:
@@ -1312,7 +1312,7 @@ translate english for_0fbd6bab:
 translate english for_f8070717:
 
     # s "Почему ты молчишь? Что не так?"
-    s "Why do you whist? What's wrong?"
+    s "Why are you silent? What's wrong?"
 
 # game/script.rpy:712
 translate english for_0f6b821c:
@@ -1342,7 +1342,7 @@ translate english for_9fcacf74:
 translate english for_93dbf3ea:
 
     # s "Николас, милый, нет, это не ты, не ты говоришь... сопротивляйся ему, прошу!"
-    s "Nicholas, honey, no! It is not you, it’s not your words... resist him, please!"
+    s "Nicholas, honey, no! It is not you, it’s not your words resist him, please!"
 
 # game/script.rpy:717
 translate english for_81498b78:
@@ -1354,13 +1354,13 @@ translate english for_81498b78:
 translate english for_d1a1dd94:
 
     # g "Хочешь прибрать к рукам мой дом? Уже сговорилась со своими грязными дружками?"
-    g "Do you want to take over my house? Already conspired with your dirty friends?"
+    g "Do you want to take my house? Already conspired with your filthy hippie friends?"
 
 # game/script.rpy:719
 translate english for_47d439cf:
 
     # g "Лживая шлюха, я убью тебя!"
-    g "Deceitful slut, I will kill you!"
+    g "Deceitful slut, I’ll kill you!"
 
 # game/script.rpy:721
 translate english for_a1aab7d9:
@@ -1384,13 +1384,13 @@ translate english for_242cb4e7:
 translate english for_1e6c2b7a:
 
     # s "Это был не ты, а твой недуг, выпестованный жестоким миром. Ты помнишь, как много боли тебе нанесли?"
-    s "It was not you, but your disease, fostered by the cruel world. Do you remember how much pain they inflicted on you?"
+    s "IIt was not you, but your disease, fostered by the cruel world. Do you remember how much pain they inflicted on you?"
 
 # game/script.rpy:729
 translate english for_4dcb1c29:
 
     # leo "Сара... я был слишком слаб.{w} Я должен был справиться..."
-    leo "Sarah... I was too weak.{w} I had to handle..."
+    leo "Sarah... I was too weak. I had to handle..."
 
 # game/script.rpy:730
 translate english for_a3a8b5a1:
@@ -1402,7 +1402,7 @@ translate english for_a3a8b5a1:
 translate english for_24f522b3:
 
     # s "Ты был сильным и сделал все что мог. Именно такого сильного человека я полюбила, такого я хочу сейчас."
-    s "You were strong and did everything you could. The strong person I fell in love with and still want to stand beside"
+    s "You were strong and did everything you could. The strong person I fell in love with and still want to stand beside."
 
 # game/script.rpy:732
 translate english for_5a71667d:
@@ -1456,13 +1456,13 @@ translate english for_d6e40d48:
 translate english for_7253196b:
 
     # leo "Спасибо, что никто из тех двоих мне больше не мешает уйти."
-    leo "Thank you, none of those two is stopping me from leaving anymore."
+    leo "Thank you. Without you, I would never have dared."
 
 # game/script.rpy:749
 translate english for_844623df:
 
     # leo "Я так и не смог обрести целостность, но я и не заслужил."
-    leo "I was never able to find integrity, but I did not deserve it."
+    leo "I haven’t never managed to find integrity, but I did not deserve it anyway."
 
 # game/script.rpy:750
 translate english for_90c50654:
@@ -1486,7 +1486,7 @@ translate english for_d1bb609a:
 translate english for_d85dbad9:
 
     # leo "Прошу тебя, избавься от этого дома. Найди свой путь и свое место в мире."
-    leo "Please, get rid of this house. Find your way and your place in the world."
+    leo "lease, get rid of this house. Find your path and your place in the world."
 
 # game/script.rpy:760
 translate english for_304b2541:
