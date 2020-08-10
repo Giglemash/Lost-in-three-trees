@@ -142,7 +142,7 @@ translate english start_6069c6d0:
 translate english start_03a14c14:
 
     # a "Это меняет дело. Так денег хватит даже на целую экспедицию..."
-    a ""
+    a "Well, it makes a difference. In this case I’ll afford even an expedition."
 
 # game/script.rpy:164
 translate english start_530e1347:
@@ -472,7 +472,7 @@ translate english start_9531549d:
 translate english start_276f2a44:
 
     # a "Любопытно. Значит, дед был серьезно болен... Это, конечно, его не оправдывает, но..."
-    a "Curious. So, grandad was really ill… Well. it doesn’t justify him, but…"
+    a "Curious. So, grandad was really ill… Well. it doesn’t justify him, but..."
 
 # game/script.rpy:365
 translate english start_bee7bd21:
@@ -1096,7 +1096,7 @@ translate english three_de33db48:
 translate english deadone_313c42e5:
 
     # "Вы не успели уклониться. Похоже, шпага пронзила ваше сердце."
-    ""
+    "It looks like you didn't manage to dodge. The sword pierced your heart."
 
 # game/script.rpy:645
 translate english for_31c4a14f:
@@ -1509,6 +1509,14 @@ translate english strings:
     # game/script.rpy:286
     old "Будет лучше пойти еще дальше по коридору второго этажа"
     new "I’d better go along the corridor on the first floor."
+
+    # game/script.rpy:375
+    old "... подтверждает расщепление личности на фоне тяжелого депрессивного расстройства. Вероятно, генезисом или триггером данного феномена послужила травля новых книг пациента в прессе, кроме того, на нескольких сеансах пациент упоминал смерть некоего близкого человека, которая, по его мнению, произошла по его вине. Временами говорит прямо «я убил», иногда «мы убили», иногда «он убил» - что это, навязчивые диссоциативные галлюцинации? Пациент, однако, отказывается углубляться в подробности."
+    new "...it confirms the personality fragmentation amid a severe depressive disorder. The genesis of or trigger for the phenomenon is likely to have been a harsh criticism that books of the patient faced in media. Besides, in some sessions the patient mentioned the death of some close person that, in his view, was his fault. Sometimes he said “I killed” or “we killed, while quite rarely - “he killed”. Can it be a symptom of dissociative hallucinations? However, the patient refused to delve into details..."
+
+    # game/script.rpy:377
+    old "Очевидно, что субличности пациента играют роль гипертрофированных защитных барьеров психики. Так, Уильям - это, несомненно, идеальный образ себя как автора, способного творить выдающиеся произведения искусства. Грегори защищает хрупкое эго автора от нападок критики и, в целом, внешней среды. Но какую функцию играет редко появляющийся Лайонель? Пока неясно. Надеюсь, увеличение дозы антидепрессантов поможет избежать повторения попыток суицида и параноидальных приступов маломотивированной агрессии..."
+    new "Undoubtedly, subpersonalities of the patient serve as hypertrophied protective barriers. Apparently, William is a perfect image of himself as a writer able to create distinguished masterpieces. Gregory defends his fragile ego from criticism and aggressive environment. But what function does rarely emerging Lionel fulfil? It’s unclear. I hope, increased dose of ADs will help to at least avoid new suicide attempts and paranoid unprovoked aggression…"
 
     # game/script.rpy:387
     old "Ты знаешь Грегори или Лайонеля?"
