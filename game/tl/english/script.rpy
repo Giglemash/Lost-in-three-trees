@@ -4,7 +4,7 @@
 translate english start_60285286:
 
     # a "Вчера полиция обнаружила моего деда мертвым."
-    a "The police has found my grandad lifeless yesterday."
+    a "The police found my grandad’s body yesterday."
 
 # game/script.rpy:122
 translate english start_d3028697:
@@ -16,7 +16,7 @@ translate english start_d3028697:
 translate english start_ca3b99cf:
 
     # a "Мой дед был великим писателем. Славу ему принесла публикация первой книги, а затем последовали сплошные творческие неудачи. Критики и пресса издевались над ним и его новыми нелепыми романами."
-    a "My grandad seemed to be a great writer. This status had arisen from his first published book but then only failures followed and overfilled the record of his career. Critics and journalists taunted him for his new ludicrous novels."
+    a "MMy grandad seemed to be a well-known writer. He got his fame from his first published book but then only failures followed and overfilled the record of his career. Critics and journalists taunted him for his new ludicrous novels."
 
 # game/script.rpy:124
 translate english start_eb99dd1b:
@@ -34,25 +34,25 @@ translate english start_25c69828:
 translate english start_eaca051c:
 
     # a "Я не видел его с самого детства. Все воспоминания о нем - светлые,{w} но в детстве все кажутся хорошими."
-    a "I haven’t seen him from my early childhood. I recall only bright memories about him{w}, but a child is so easy to be cheated."
+    a "I haven’t seen him since my early childhood. I recall only bright memories about him,{w} but childhood is a sleep of reason."
 
 # game/script.rpy:130
 translate english start_b4fedbd5:
 
     # a "Факт в том, что дед бросил нас с матерью, когда нам было очень тяжело после смерти отца. Мама не говорила мне, но она часто писала деду, просила о помощи."
-    a "In fact, grandfather abandoned us when we were ruined after papa’s death. Mom didn’t me thin but she used to write him asking for help. The answer was silence."
+    a "In fact, grandfather abandoned us when we were ruined after papa’s death. Mom didn’t tell me but she used to write to him asking for help."
 
 # game/script.rpy:131
 translate english start_9118ec42:
 
     # a "Он не снизошел."
-    a "The answer was silence."
+    a "Silence was the answer."
 
 # game/script.rpy:132
 translate english start_a00b51d7:
 
     # a "Не соизволил даже ответить."
-    a "He never condescended even to reply."
+    a "He didn’t deign to even just reply."
 
 # game/script.rpy:133
 translate english start_20cfbeb0:
@@ -64,7 +64,7 @@ translate english start_20cfbeb0:
 translate english start_ac0fbbd1:
 
     # a "Теперь я - единственный наследник этого... человека. После смерти матери меня в этой дыре ничего не держит."
-    a "Now I’m the only heir to this...man. Well, after mom’s died I have nothing in this hellhole..."
+    a "Now I’m the only heir to this...man. Well, after mom’s died I have nothing in this godforsaken town..."
 
 # game/script.rpy:140
 translate english start_56b4c0f3:
@@ -76,7 +76,7 @@ translate english start_56b4c0f3:
 translate english start_80b7fcce:
 
     # a "Надо скорее продать этот мрачный особняк и уехать. Думаю, этих денег должно хватить, чтобы начать новую жизнь. Всегда хотел погрузиться в египтологию."
-    a "I wanna sell this dreary mansion and leave for new life. I bet it’ll be enough money. I’ve always dreamt of egyptology."
+    a "I wanna sell this dreary mansion and leave for a new life. I bet it’ll be enough money. I’ve always dreamt about egyptology."
 
 # game/script.rpy:146
 translate english start_0ae9bcd0:
@@ -88,7 +88,7 @@ translate english start_0ae9bcd0:
 translate english start_15bbf8a2:
 
     # a "Алло."
-    a "Hallo?"
+    a "Hello?"
 
 # game/script.rpy:149
 translate english start_3af3e8cf:
@@ -100,43 +100,43 @@ translate english start_3af3e8cf:
 translate english start_49e43b8c:
 
     # a "Вы звоните не за этим."
-    a "You call me for something else."
+    a "You’re calling me for something else."
 
 # game/script.rpy:151
 translate english start_f6383cbe:
 
     # i "Да, тебя не проведешь."
-    i ""
+    i "Well, yeah, you see the point."
 
 # game/script.rpy:152
 translate english start_93692b43:
 
     # i "В общем, слушай, за год до своей кончины твой дед Николас сделал заявление в прессе. Мол, теперь-то у него точно будет шедевр."
-    i "Well, yeah, you see the point. Listen. Your grandad Nicholas made a promise in the interview to issue a true masterpiece about a year ago."
+    i "Listen. Your grandad Nicholas made a promise in the interview to release a true masterpiece about a year ago."
 
 # game/script.rpy:153
 translate english start_16fdaeeb:
 
     # i "Мы в нашем бизнесе таким хвастливым обещаниям верить не привыкли - особенно от тех, кто не оправдывает доверие. Но и упускать возможную прибыль мы себе позволить не можем."
-    i "You know, our business prevents us from trusting bragging. Especially, when a bragger’s already broken faith. But we can’t pass by potential profits either."
+    i "You know, our business prevents us from trusting bragging. Especially, when a bragger has already broken faith. But we can’t pass by potential profits either."
 
 # game/script.rpy:154
 translate english start_250f6bd5:
 
     # i "Год - хороший срок, чтобы довести книгу до ума."
-    i "A year is a good period to polish a book. "
+    i "A year is a good period to polish a book."
 
 # game/script.rpy:155
 translate english start_7d8ecca3:
 
     # i "Да и знаешь ли, книги авторов из свежих могил продаются лучше всего."
-    i "And you know, freshly dead authors sell better. So, if you find your grandad’s writing, you’ll get a bundle. Keep in touch."
+    i "And you know, freshly dead authors sell better."
 
 # game/script.rpy:156
 translate english start_6069c6d0:
 
     # i "В общем, найдешь рукопись старика - получишь отличный гонорар. Если что, я на связи."
-    i "Well, it makes a difference. In this case I’ll afford even an expedition."
+    i "So, if you find your grandad’s writings, you’ll get a bundle. Keep in touch."
 
 # game/script.rpy:157
 translate english start_03a14c14:
@@ -160,19 +160,19 @@ translate english start_85b1c598:
 translate english start_aa4b3553:
 
     # a "Похоже, сплетни не врали. Старый развратник. На вид она ничего так... Не ради ли тебя наш дед забыл о нашей семье? Хотя... если он так легко выкинул нас из сердца, то проблема тут явно не в ней..."
-    a "Well, rumours occured to be true. Old perv. She’s kind of pretty, though. Did she outshine our family? However, if he cast us away from his heart so easily, then it’s not her fault anyway."
+    a "Well, rumours occured to be true. Old perv. She’s kind of pretty, though. Did she outshine our family? However, if he threw us away from his heart so easily, then it’s not her fault anyway."
 
 # game/script.rpy:171
 translate english start_eec4daa0:
 
     # a "А там и недопитые бутылки. Значит, и это правда. Вот и истина в вине... Жалкий оказался человек..."
-    a "I see half-finished bottles from here. Another truth revealed, another gossip confirmed. In vino veritas. What a despicable man he was…"
+    a "I see half-finished bottles from here. Another truth revealed, another gossip confirmed. In vino veritas. What a despicable man he was..."
 
 # game/script.rpy:175
 translate english start_6f5ec3ff:
 
     # a "Хм... толстый слой пыли на клавишах. Никто не играл на нем уже много лет. Очередной бессмысленный предмет."
-    a "Thick dust layer over piano keys. No one’s played it for decades. Another senseless props."
+    a "Thick dust layer over piano keys. No one played it for decades. Another useless props."
 
 # game/script.rpy:185
 translate english start_0ae9bcd0_1:
@@ -184,7 +184,7 @@ translate english start_0ae9bcd0_1:
 translate english start_09583e24:
 
     # a "Черт, только этого не хватало. Теперь еще щитки искать..."
-    a "Damn, that’s just what I need. Now I also need to find a panel."
+    a "Damn, that’s just what I needed. Now I have to to find a fuse box."
 
 # game/script.rpy:196
 translate english start_d2ab6966:
@@ -208,31 +208,31 @@ translate english start_2889771f:
 translate english start_3062847c:
 
     # a "Это напрягает."
-    a "It makes me nervous."
+    a "It’s damn creepy."
 
 # game/script.rpy:224
 translate english start_ce96d54e:
 
     # a "Кто, черт возьми, зажег эту свечу?{w} Сюда что, кто-то вломился? Надо звонить копам."
-    a "Who the fuck lit the candle?{w} Intrusion? Better call the cops."
+    a "Who the fuck lit the candle? Intruders? Better call the cops."
 
 # game/script.rpy:225
 translate english start_ba56eddc:
 
     # a "Черт, мобильная связь тоже накрылась. Что за жесть такая тут происходит? Лучше уйти отсюда. Возьму свечу, а то с той лестницы можно и навернуться ненароком."
-    a "Fuck! Out of coverage. What the fuck is going on here? I’m leaving right now. I’ll take the candle or it’s easy to fall down the stairs."
+    a "Fuck! Out of coverage. What the fuck is going on here? I’m leaving right now. I’ll take the candle to not fall down the stairs."
 
 # game/script.rpy:233
 translate english start_0191aacc:
 
     # a "Кажется, в каминной на первом этаже кто-то есть. Выйти из дома можно только там. Черт, почему в этом доме нет черного входа?"
-    a "It sounds someone is on the ground floor. In the living room. The only exit is there. Fuck, why is there no backdoor?"
+    a "It sounds like someone is on the ground floor. In the living room. The only exit is there. Fuck, why is there no backdoor?"
 
 # game/script.rpy:234
 translate english start_81b660f4:
 
     # a "Придется выяснить, кто там бродит. Надеюсь, он один и не вооружен."
-    a "I have to deal with the intruder. Hope he’s alone and unarmed."
+    a "I have to deal with the intruder now. Hope he’s alone and unarmed."
 
 # game/script.rpy:241
 translate english start_71e87845:
@@ -250,13 +250,13 @@ translate english start_e5d5ecd5:
 translate english start_2c09ce09:
 
     # n "Ты когда-нибудь любил?"
-    n "Did you ever love?"
+    n "Did you ever fall in love?"
 
 # game/script.rpy:244
 translate english start_c220bd07:
 
     # a "Слушай, мне сейчас не до романтики. Сюда уже едет полиция. Медленно подними руки. Это ты вырубил свет?"
-    a "Fuck this love stuff, you freak! I’ve called the cops. Hands up, slowly! Is it you who cut the lights?"
+    a "Fuck this love stuff, you freak! I’ve called the cops. Hands up, slowly! Is it you who cut off the lights?"
 
 # game/script.rpy:245
 translate english start_1de5f2b9:
@@ -286,7 +286,7 @@ translate english start_0c105709:
 translate english start_337fa71e:
 
     # a "Что это было? Что? Он... он не мог просто исчезнуть, я отвернулся на секунду. Что за?.. Черт, надо убираться отсюда."
-    a "I can’t believe… He couldn’t just...disappear, I turned away for a second! Fuck, I need to go out!"
+    a "It’s not possible... He couldn’t just...disappear. I turned away for a second! Fuck, I need to find my way out!"
 
 # game/script.rpy:272
 translate english start_10ca79c7:
@@ -298,19 +298,19 @@ translate english start_10ca79c7:
 translate english start_7bf3eda7:
 
     # a "Крепкая, выбить почти нереально. Так, надо успокоиться. Паника убивает быстрее всего."
-    a "It’s really impossible to kick down. I need to calm down. Panic kills."
+    a "It’s barely impossible to knock it out. I need to calm down. Panic kills."
 
 # game/script.rpy:282
 translate english start_0d83c6a4:
 
     # a "В детстве кто-то учил...{w} кажется на фехтовании...{w} короткий вдох, продолжительный выдох."
-    a "I remember...{w} I was a child... someone taught me...{w} short inhale, long exhale."
+    a "I remember...{w} I was a child... someone taught me... short inhale, long exhale. It’s better now."
 
 # game/script.rpy:284
 translate english start_75e782bd:
 
     # a "Надо осмотреть комнаты, может удастся найти ключ."
-    a "It’s better. I should go and look for the key."
+    a "I should go and look for the key."
 
 # game/script.rpy:291
 translate english start_6173e19d:
@@ -322,19 +322,19 @@ translate english start_6173e19d:
 translate english start_280c0a4c:
 
     # n "Тише, тише, молодой человек, не надо так орать, будто вы до мертвых добудиться хотите.{w} Позвольте представиться: Уильям, мастер слова и пера."
-    n "Hush, lad, don’t be so loud as if you are shouting at dead to awaken them. Let me introduce myself. I am William, the master of words."
+    n "Hush, lad, don’t be so loud as if you are shouting at the dead to awake them. Let me introduce myself.{w} I am William, the master of words"
 
 # game/script.rpy:293
 translate english start_96c295de:
 
     # Will "Кстати, как вам этот отрывок:"
-    Will "By the way, would you be so kind to deliver your opinion on this:"
+    Will "By the way, could you be so kind to deliver your opinion on this:"
 
 # game/script.rpy:294
 translate english start_23cb8c9d:
 
     # Will "«Ход его рассуждений прервался, и он увидел бесконечную тьму ее разума, лишенного всяческого сострадания. Она была безжалостным хищником, мифической сиреной, одержимой неутолимой жаждой губить души...»"
-    Will "«His train of thought crashed, so he saw the infinite darkness in her mind bereft of any sympathy. She was a merciless predator, a siren obsessed with insatiable desire to feed on ruined souls...»"
+    Will "«His train of thought crashed, so he discerned the infinite darkness in her mind bereft of any sympathy. She was a merciless predator, a siren obsessed with an insatiable desire to feed on ruined souls...»"
 
 # game/script.rpy:295
 translate english start_5d62cc48:
@@ -370,7 +370,7 @@ translate english start_406d43a4:
 translate english start_189f25f5:
 
     # Will "Как прискорбно, еще один обыватель, а ведь все-таки внук Николаса."
-    Will "It is so sorrowful, another philistine I come across… And yet he is a grandchild of Nicholas."
+    Will "It is so sorrowful, another philistine I come across... And yet he is a grandchild of Nicholas."
 
 # game/script.rpy:302
 translate english start_1c428ff9:
@@ -388,7 +388,7 @@ translate english start_96f4e657:
 translate english start_7cb95a3d:
 
     # a "Но... там нет никакого ключа!"
-    a "But… there’s no key!"
+    a "But... there’s no key!"
 
 # game/script.rpy:312
 translate english start_7f1cbdbf:
@@ -412,7 +412,7 @@ translate english start_ac2ab2af:
 translate english start_7bed0c40:
 
     # g "Позарился на чужое?"
-    g "You wanted to steal his property?"
+    g "You wanted to steal his belongings?!"
 
 # game/script.rpy:316
 translate english start_2e9fe78d:
@@ -430,13 +430,13 @@ translate english start_0ae9bcd0_2:
 translate english start_f6da3028:
 
     # a "Я что, схожу с ума?! Этого не может быть... Это все нереально."
-    a "Am I go crazy right now?! It’s impossible… It can’t be real."
+    a "Am I going crazy right now?! It’s impossible... It can’t be real."
 
 # game/script.rpy:341
 translate english start_a6043b77:
 
     # a "Боже, как же мне холодно... какой-то озноб...{w} надо сначала... срочно найти что... чем согреться."
-    a "God, it am so cold… some shivers…{w} I need to… find something… to get warm."
+    a "God, it is so cold... some shiver... I need to... find something... to get warm."
 
 # game/script.rpy:353
 translate english start_08768294:
@@ -448,31 +448,31 @@ translate english start_08768294:
 translate english start_a6af7fec:
 
     # a "Все не могу понять:{w} я брежу? Я сплю?{w} Или с этим местом что-то не так?"
-    a "I still can’t understand.{w} Am I delirious? Am I sleeping?{w} What’s wrong with this place?"
+    a "I still can’t understand.{w} Am I hallucinating? Am I sleeping? What’s wrong with this place?"
 
 # game/script.rpy:355
 translate english start_837c49bd:
 
     # a "Они же выглядит неживыми...{w} гниющими?"
-    a "These disappearing men look so weird… so lifeless{w} and maybe even rotting…"
+    a "These disappearing men look so weird... so lifeless{w} and maybe even rotting..."
 
 # game/script.rpy:356
 translate english start_9ea55ca1:
 
     # a "Они прокляты? Я проклят? Черт..."
-    a "Are they cursed? Am I cursed? Damn…"
+    a "Are they cursed? Am I cursed? Damn..."
 
 # game/script.rpy:358
 translate english start_9531549d:
 
     # a "Тут среди углей были какие-то обгоревшие бумаги."
-    a "Well, when I tried to light the fire I found something like burnt papers."
+    a "The fireplace kept the remains of something like burnt papers."
 
 # game/script.rpy:364
 translate english start_276f2a44:
 
     # a "Любопытно. Значит, дед был серьезно болен... Это, конечно, его не оправдывает, но..."
-    a "Curious. So, grandad was really ill… Well. it doesn’t justify him, but..."
+    a "Curious. So, grandad was really ill... Well. it doesn’t justify him, but..."
 
 # game/script.rpy:365
 translate english start_bee7bd21:
@@ -484,25 +484,25 @@ translate english start_bee7bd21:
 translate english start_b8db4c30:
 
     # a "Похоже, и вправду попал в дом с привидениями. Или в готический роман. Эдгар, ты балуешься?"
-    a "Seems like I found myself in a ghost mansion. Straight from a gothic fiction. Edgar, is it you making fun of me?"
+    a "Seems like I found myself in a haunted mansion. Straight from a gothic fiction. Edgar, is it you making fun of me?"
 
 # game/script.rpy:370
 translate english start_f0598759:
 
     # a "Ха. А дед и из могилы смог доставить хлопот. Но, похоже, сошел с ума все-таки не я."
-    a "Ha. And my grandad managed to cause troubles for me even from the grave. At least, it’s not me who’s gone mad."
+    a "Huh. And my grandad managed to cause troubles for me even from the grave. At least, it’s not me who’s gone insane."
 
 # game/script.rpy:371
 translate english start_bdb411d1:
 
     # a "Ну, видимо, все по классике: разгадай загадку дома, чтобы выйти.{w} Надеюсь, бледная хрупкая красотка по канону жанра тоже будет."
-    a "I guess it’s likely to be classic. I need to solve a riddle of the mansion to get out. I hope there’ll also be a pale delicate lady."
+    a "I guess it’s like in the classics. I need to solve a riddle of the mansion to find a way out. I hope there’ll also be a pale delicate lady."
 
 # game/script.rpy:372
 translate english start_342d702b:
 
     # a "Пойду в кабинет, может найду записи.{w} Надо взять свечу."
-    a "I’ll go to the cabinet and look for some other records.{w} Better take the candle."
+    a "I’ll go to the study and look for some other records.{w} It’s better to take a candle with me."
 
 # game/script.rpy:383
 translate english start_c2f30e31:
@@ -514,7 +514,7 @@ translate english start_c2f30e31:
 translate english start_8050a6fc:
 
     # Will ghost "Это кто? Имена будто у персонажей каких-то второсортных новелл."
-    Will ghost "Who are them? These names are like belonging to characters of low-tier novels."
+    Will ghost "Who are them? These names are likely suitable for characters of low-tier novels."
 
 # game/script.rpy:395
 translate english start_a06c43f7:
@@ -526,7 +526,7 @@ translate english start_a06c43f7:
 translate english start_a7efc82c:
 
     # Will ghost "Мне некогда рассматривать каких-то девиц. Даже на портретах."
-    Will ghost "I have neither time, nor will to look at any girls. Even if they are on pictures."
+    Will ghost "I have neither time, nor will to look at any girls. Even if they are in pictures."
 
 # game/script.rpy:399
 translate english start_8eeb54d9:
@@ -556,7 +556,7 @@ translate english start_fc540512:
 translate english start_2d5d6f31:
 
     # Will ghost ob "Это кто? Имена будто у персонажей каких-то второсортных новелл."
-    Will ghost ob "Who are them? These names are like belonging to characters of low-tier novels."
+    Will ghost ob "Who are them? These names are likely suitable for characters of low-tier novels."
 
 # game/script.rpy:416
 translate english start_4baaa638:
@@ -568,13 +568,13 @@ translate english start_4baaa638:
 translate english start_8b2d4f95:
 
     # Will ghost ob "Мне некогда рассматривать каких-то девиц. Даже на портретах."
-    Will ghost ob "I have neither time, nor will to look at any girls. Even if they are on pictures."
+    Will ghost ob "I have neither time, nor will to look at any girls. Even if they are in pictures."
 
 # game/script.rpy:427
 translate english start_0f4d74ed:
 
     # Will @ ghost o4ki "Молодой человек! Николас хоть и был посредственным писателем, но человеком был весьма приличным."
-    Will @ ghost o4ki "Be respectful! Obviously, Nicholas has killed the art of literature with every his book but he was a decent man, not a murderer."
+    Will @ ghost o4ki "Be respectful! Obviously, Nicholas has killed the art of literature with every book he wrote but he was a decent man, not a murderer."
 
 # game/script.rpy:428
 translate english start_0c4bc478:
@@ -586,19 +586,19 @@ translate english start_0c4bc478:
 translate english start_fd48af62:
 
     # Will "Молодой человек, не разочаровывайте меня окончательно."
-    Will "Please, do not disappoint me ultimately!"
+    Will "Please, do not disappoint me completely!"
 
 # game/script.rpy:433
 translate english start_237be041:
 
     # Will "Писательский труд суть чистое творение разумом вселенной."
-    Will "Writing is creating new universes with a word."
+    Will "Writing is a creation of the new universe by your word."
 
 # game/script.rpy:434
 translate english start_9e05eff4:
 
     # Will "Вы чувствуете метафизическое очарование подобного определения?"
-    Will "Do you feel metaphysical connotations of the definition?"
+    Will "Do you feel a metaphysical fascination with the definition given?"
 
 # game/script.rpy:435
 translate english start_1e286733:
@@ -616,7 +616,7 @@ translate english start_544051a5:
 translate english two1_4b27e0fa:
 
     # Will "Однако, вы умудрились истощить мое долгое терпение и окончательно меня разочаровать."
-    Will "Nonetheless, you managed to exhaust ma patience and disappoint me completely."
+    Will "Nonetheless, you managed to exhaust my patience and disappoint me completely."
 
 # game/script.rpy:459
 translate english two1_a16e8c35:
@@ -658,7 +658,7 @@ translate english two1_985d1882:
 translate english two1_93d94966:
 
     # a "Тут... одно и то же..."
-    a "It’s all the same…"
+    a "It’s all the same..."
 
 # game/script.rpy:480
 translate english two1_2b9685f8:
@@ -682,7 +682,7 @@ translate english two2_44fd188c:
 translate english two2_ef25cfc8:
 
     # a "Дед написал минимум один бестселлер, общепризнанно вошедший в классику литературы."
-    a "My grandpa has wrote at least one bestseller that was generally recognized."
+    a "My grandpa has written at least one bestseller that was generally recognized."
 
 # game/script.rpy:494
 translate english two2_d1f0cbfb:
@@ -748,7 +748,7 @@ translate english two2_cc04554b:
 translate english two2_ea776d8b:
 
     # Will "Помилуйте, как некультурно спрашивать такое..."
-    Will "Forgive me, it is so ill-mannered of you to ask such…"
+    Will "Forgive me, it is so ill-mannered of you to ask such..."
 
 # game/script.rpy:505
 translate english two2_0c14c4f3:
@@ -760,7 +760,7 @@ translate english two2_0c14c4f3:
 translate english two2_8d9c6bcd:
 
     # Will "Подите прочь..."
-    Will "Please, leave me alone…"
+    Will "Please, leave me alone..."
 
 # game/script.rpy:507
 translate english two2_fb2baed8:
@@ -790,7 +790,7 @@ translate english two2_7b42bcb2:
 translate english two2_dd022427:
 
     # Will ghost "Вы... вы... правы."
-    Will ghost "You… You are right. Alas!"
+    Will ghost "You... You are right. Alas!"
 
 # game/script.rpy:512
 translate english two2_76d66a7b:
@@ -808,13 +808,13 @@ translate english two2_981da51a:
 translate english two2_4df86fa9:
 
     # Will "Это так больно.{w} Но в то же время...{w} Я чувствую, что наконец-то свободен."
-    Will "It is so painful…{w} However, at the same time, I finally feel free."
+    Will "It is so painful...{w} However, at the same time, I finally feel free."
 
 # game/script.rpy:515
 translate english two2_9c73257e:
 
     # Will "Парадоксально, но я благодарен вам.{w} Без вас, кто знает, сколько бы я еще был прикован к этому месту."
-    Will "Paradoxically, I am grateful you.{w} Who knows how many centuries I would have spent here chained to the place if it was not you."
+    Will "Paradoxically, I am grateful to you.{w} Who knows how many centuries I would have spent here chained to the place if it was not you."
 
 # game/script.rpy:516
 translate english two2_bb7d1beb:
@@ -862,7 +862,7 @@ translate english two3_07098fb3:
 translate english two3_b30a495b:
 
     # Will "Убирайтесь отсюда, я больше не собираюсь лицезреть вашу отвратительную физиономию."
-    Will "Get out! I can not endure your presense any longer!"
+    Will "Get out! I can not endure your presence any longer!"
 
 # game/script.rpy:540
 translate english two3_c15ce801:
@@ -946,7 +946,7 @@ translate english three_430ef887:
 translate english three_dc8ee85d:
 
     # g ghost enemy "Сейчас ты заплатишь за эти слова! Защищайся!"
-    g ghost enemy "You’ll pay for these words! Garde!"
+    g ghost enemy "You’ll pay for these words! En garde!"
 
 # game/script.rpy:587
 translate english three_1c1c21fd:
@@ -970,7 +970,7 @@ translate english three_182f92f4:
 translate english three_b07a97ea:
 
     # a "Ты убил... женщину?"
-    a "You killed… a woman?"
+    a "You killed... a woman?"
 
 # game/script.rpy:591
 translate english three_b03585db:
@@ -988,7 +988,7 @@ translate english three_f7858457:
 translate english three_c0b4b693:
 
     # g "Где же ты был, внук, когда твоему деду было так плохо?{w} Когда все ополчились против него?{w} Отчего не навестил?"
-    g "Where were you, grandson, when your grandfather suffered? When did everyone hated him? Why didn't you come?"
+    g "Where were you, grandson, when your grandfather suffered? When did everyone hate him? Why didn't you come?"
 
 # game/script.rpy:597
 translate english three_6f4aee89:
@@ -1036,7 +1036,7 @@ translate english three_ac55c582:
 translate english three_41934ad4:
 
     # a "Из-за тебя его все бросили, ты всех распугал, а дед выл от одиночества."
-    a "Because of you, everyone left him, you scared everyone off, and the grandpa howled from loneliness."
+    a "Because of you, everyone left him, you scared everyone off, and the grandpa howled from loneliness for years."
 
 # game/script.rpy:612
 translate english three_2721609c:
@@ -1108,7 +1108,7 @@ translate english for_31c4a14f:
 translate english for_8685c4f3:
 
     # a "Сам не ожидал, что смогу так ловко увернуться. Как будто в детстве меня учили пируэтам. Может дед и учил? И этим спас меня от своей же агрессивной части?"
-    a "I did not expect that I could dodge so deftly. As if I was taught pirouettes as a child. Maybe grandfather taught? And by this, he saved me from his aggressive part? Ironically."
+    a "I did not expect that I could dodge so deftly. As if I was taught this as a child. Maybe  grandfather taught? And by this, he saved me from his aggressive part? Ironically."
 
 # game/script.rpy:647
 translate english for_dc3dc7c9:
@@ -1276,7 +1276,7 @@ translate english for_d5a91fca:
 translate english for_52d62a65:
 
     # leo "Мне нет прощения.{w} Я ведь убил мою Сару... сам убедись, как это было ужасно."
-    leo "There is no forgiveness.{w} I’ve killed my Sarah see for yourself how awful it was."
+    leo "There is no forgiveness. I’ve killed my Sarah... behold how awful it was."
 
 # game/script.rpy:705
 translate english for_363e527b:
@@ -1462,7 +1462,7 @@ translate english for_7253196b:
 translate english for_844623df:
 
     # leo "Я так и не смог обрести целостность, но я и не заслужил."
-    leo "I haven’t never managed to find integrity, but I did not deserve it anyway."
+    leo "I have failed to find integrity, but I did not deserve it anyway."
 
 # game/script.rpy:750
 translate english for_90c50654:
@@ -1492,13 +1492,13 @@ translate english for_d85dbad9:
 translate english for_304b2541:
 
     # s "Как же долго я ждала этого пиршества. И вот оно наступило."
-    s "How long have I been waiting for this feast. And so it came."
+    s "I have been awaiting this feast for so long. And it finally came."
 
 # game/script.rpy:761
 translate english for_78476522:
 
     # s "Хотя из-за твоего несмышленого внука я так и не получила всего Николаса, но и ты сгодишься, сладкий."
-    s "Although I never got all of Nicholas because of your foolish grandson, you are fine too, honey."
+    s "Although I’ll never get all of Nicholas because of your foolish grandson, you are fine too, honey."
 
 translate english strings:
 
@@ -1512,11 +1512,11 @@ translate english strings:
 
     # game/script.rpy:375
     old "... подтверждает расщепление личности на фоне тяжелого депрессивного расстройства. Вероятно, генезисом или триггером данного феномена послужила травля новых книг пациента в прессе, кроме того, на нескольких сеансах пациент упоминал смерть некоего близкого человека, которая, по его мнению, произошла по его вине. Временами говорит прямо «я убил», иногда «мы убили», иногда «он убил» - что это, навязчивые диссоциативные галлюцинации? Пациент, однако, отказывается углубляться в подробности."
-    new "...it confirms the personality fragmentation amid a severe depressive disorder. The genesis of or trigger for the phenomenon is likely to have been a harsh criticism that books of the patient faced in media. Besides, in some sessions the patient mentioned the death of some close person that, in his view, was his fault. Sometimes he said “I killed” or “we killed, while quite rarely - “he killed”. Can it be a symptom of dissociative hallucinations? However, the patient refused to delve into details..."
+    new "... it confirms the personality fragmentation amid a severe depressive disorder. The genesis or the trigger for this phenomenon is likely to have been a harsh criticism that patient’s books faced in the media. Therewith, in some sessions the patient mentioned the death of some close person caused, in his view, by his fault. Sometimes he said «I killed» or «we killed»,  quite rarely - «he killed». Can it be a symptom of dissociative hallucinations? However, the patient refused to delve into details..."
 
     # game/script.rpy:377
     old "Очевидно, что субличности пациента играют роль гипертрофированных защитных барьеров психики. Так, Уильям - это, несомненно, идеальный образ себя как автора, способного творить выдающиеся произведения искусства. Грегори защищает хрупкое эго автора от нападок критики и, в целом, внешней среды. Но какую функцию играет редко появляющийся Лайонель? Пока неясно. Надеюсь, увеличение дозы антидепрессантов поможет избежать повторения попыток суицида и параноидальных приступов маломотивированной агрессии..."
-    new "Undoubtedly, subpersonalities of the patient serve as hypertrophied protective barriers. Apparently, William is a perfect image of himself as a writer able to create distinguished masterpieces. Gregory defends his fragile ego from criticism and aggressive environment. But what function does rarely emerging Lionel fulfil? It’s unclear. I hope, increased dose of ADs will help to at least avoid new suicide attempts and paranoid unprovoked aggression…"
+    new "Undoubtedly, the patient’s subpersonalities serve as hypertrophied protective barriers. Apparently, William is a perfect image of himself as a writer able to create distinguished masterpieces. Gregory defends his fragile ego from criticism and aggressive environment. But what functions does rarely emerging Lionel fulfil? It’s unclear. I hope, increased dose of ADs will help to at least avoid new suicide attempts and paranoid unprovoked aggression..."
 
     # game/script.rpy:387
     old "Ты знаешь Грегори или Лайонеля?"
@@ -1524,7 +1524,7 @@ translate english strings:
 
     # game/script.rpy:387
     old "Ты знаешь что-то про девушку с портрета внизу на каминной полке?"
-    new "Do you know anything about a girl depicted on the picture in the living room?"
+    new "Do you know anything about a girl depicted in the picture in the living room?"
 
     # game/script.rpy:401
     old "Ты кто?"
@@ -1532,7 +1532,7 @@ translate english strings:
 
     # game/script.rpy:423
     old "Ты не в курсе, Николас никого не убивал?"
-    new "Have you heard, maybe, Nicholas killed someone?"
+    new "Do you know if Nicholas killed somebody?"
 
     # game/script.rpy:423
     old "Тебе заняться больше нечем, как сидеть тут и заниматься «интеллектуальной деятельностью» в темноте?"
@@ -1544,7 +1544,7 @@ translate english strings:
 
     # game/script.rpy:423
     old "Вы не знаете, Николас дописал перед смертью ту книгу, про которую делал объявление в прессе?"
-    new "Do you happen to know whether Nicholas has finished his last book?"
+    new "Do you happen to know whether y Nicholas has finished writing his last book?"
 
     # game/script.rpy:442
     old "Я - внук Николаса и его прямой наследник. Эта книга теперь принадлежит мне. Прошу отдать ее."
@@ -1580,7 +1580,7 @@ translate english strings:
 
     # game/script.rpy:599
     old "Получены документы на дом"
-    new "Home documents received"
+    new "Mansion deeds received"
 
     # game/script.rpy:666
     old "Перебить"
@@ -1592,7 +1592,7 @@ translate english strings:
 
     # game/script.rpy:738
     old "Получены документы на дом и книга"
-    new "House documents and book received"
+    new "Mansion deeds and book received"
 
     # game/script.rpy:753
     old "Получен ключ"
