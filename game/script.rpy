@@ -85,6 +85,8 @@ init:
     
     image sara1 = "character/sara dead.png"
     image sara ghost = im.MatrixColor ("character/sara dead.png", im.matrix.opacity(0.65))
+    image sara2 = "character/sara evil.png"
+    image sara ghost evil = im.MatrixColor ("character/sara evil.png", im.matrix.opacity(0.65))
     
     image smert = Solid("#980002")
 
@@ -768,7 +770,10 @@ label for:
                         show nic ghost with move:
                             xalign 0.4
                         d "Теперь, позволь мне уйти с любимой."
-
+                show sara ghost with move:
+                        xalign 0.5
+                s "Как же долго я ждала этого пиршества. И вот оно наступило."
+                s "Хотя из-за твоего несмышленого внука я так и не получила всего Николаса, но и ты сгодишься, сладкий."
             else:
                 show sara ghost with move:
                     xalign 0.5
@@ -785,10 +790,10 @@ label for:
                     menu:
                         "Получены документы на дом":
                             leo "Прошу тебя, избавься от этого дома. Найди свой путь и свое место в мире."
-            show sara ghost with move:
-                xalign 0.5
-            s "Как же долго я ждала этого пиршества. И вот оно наступило."
-            s "Хотя из-за твоего несмышленого внука я так и не получила всего Николаса, но и ты сгодишься, сладкий."
+                show sara ghost evil with move:
+                    xalign 0.5
+                s "Как же долго я ждала этого пиршества. И вот оно наступило."
+                s "Хотя из-за твоего несмышленого внука я так и не получила всего Николаса, но и ты сгодишься, сладкий."
 
             # исчезновение
             # Конец. Титры.
