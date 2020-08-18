@@ -66,6 +66,10 @@ init:
     image leo ghost vspom = im.MatrixColor ("character/Lionel/leo vspom.png", im.matrix.opacity(0.65))
     image lionel3 = "character/Lionel/leo pe4alko.png"
     image leo ghost pe4al = im.MatrixColor ("character/Lionel/leo pe4alko.png", im.matrix.opacity(0.65))
+    image lionel4 = "character/Lionel/le0_ogon.png"
+    image leo ghost fire = im.MatrixColor ("character/Lionel/le0_ogon.png", im.matrix.opacity(0.65))
+    image lionel4 = "character/Lionel/le0bezlitsa.png"
+    image leo ghost die = im.MatrixColor ("character/Lionel/le0bezlitsa.png", im.matrix.opacity(0.65))
     
     image william1 = "character/William/will na gg.png"
     image will ghost = im.MatrixColor ("character/William/will na gg.png", im.matrix.opacity(0.65))
@@ -683,10 +687,11 @@ label for:
             a "Тебя никогда не интересовал кто-либо кроме себя самого.{w} Ты и сюда прибежал, чтобы жалеть себя."
             a "Ты сам во всем виноват и заслужил все, что с тобой произошло."
             leo "Ты прав. Абсолютно."
-            show leo ghost with move:
+            show leo ghost die with move:
                 xalign 0.2
             leo "Я эгоист. Я ничтожество. Я убийца. Я заслужил муки."
-            show leo ghost pe4al
+            show leo ghost fire with dissolve:
+                xalign 0.1
             leo "Пора перестать прятаться и принять свою участь в адском пламени."
             # INT Дверь в особняк.
             scene dver with wiperight
