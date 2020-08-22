@@ -16,7 +16,7 @@ translate english start_d3028697:
 translate english start_ca3b99cf:
 
     # a "Мой дед был великим писателем. Славу ему принесла публикация первой книги, а затем последовали сплошные творческие неудачи. Критики и пресса издевались над ним и его новыми нелепыми романами."
-    a "MMy grandad seemed to be a well-known writer. He got his fame from his first published book but then only failures followed and overfilled the record of his career. Critics and journalists taunted him for his new ludicrous novels."
+    a "My grandad seemed to be a well-known writer. He got his fame from his first published book but then only failures followed and overfilled the record of his career. Critics and journalists taunted him for his new ludicrous novels."
 
 # game/script.rpy:124
 translate english start_eb99dd1b:
